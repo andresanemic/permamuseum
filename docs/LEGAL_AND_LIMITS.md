@@ -1,21 +1,59 @@
-# Legal and limits
+# Legal and limits / Marco legal y límites
 
 ## English
 
-The project agreement does not cite a law as a design basis and says that no primary legal or heritage source was consulted for this stage. The project notes list Chilean Law 17.288 on national monuments, Law 17.336 on intellectual property, and Law 21.719 on personal data as topics for future investigation. Their current text, applicability, interpretation, and implications have not been reviewed here. No claim of legal compliance is made, and no competent legal professional has reviewed this material.
+Permamuseum is a local technical study of how a record might distinguish claims about cultural works, the references offered for them, a bounded review, and a permission for a named use. It does not determine legal rights or cultural facts. No primary legal or heritage source was consulted for the recorded stage, and no qualified legal professional reviewed this material. The project makes no claim of compliance with a law or regulation.
 
-The prototype records bounded claims and permissions. It does not grant legal status to provenance, decide ownership or copyright, establish a grantor’s authority, certify authenticity, establish absence of looting, or determine evidentiary admissibility. Permamuseum is not a real museum, collection, institutional pilot, or cultural certification. It does not verify real identity, the truth of external evidence, or a work’s cultural value; it does not promise permanent preservation or prevent looting, and the name does not promise permanent storage. The project does not establish that a distributed ledger creates cooperation. A technical signature, hash, or kernel receipt speaks only to the technical check described in its record. Stellar use is an architectural hypothesis; the documented walkthrough is local and has no external anchor.
+### What a record can say
 
-All work described for this project uses synthetic data. There are no real museum, collection, artist, collector, reviewer, or personal evidence records in the walkthrough. The actual institution described in the original proposal is not a participant and its records, images, catalog, staff names, and metadata are not used.
+A record can identify who made a statement in the example, the authority they say they have, which references were named, which version was reviewed, what a reviewer’s mandate covered, what fell outside the review, and which use a permission names. It can preserve an explicit gap, disagreement, expiry, or rejection. A technical receipt can help show that the stored operation has not changed since the relevant integrity check.
 
-Open questions include who may appoint or accredit an independent reviewer; what rules govern identity, authority, rights, evidence retention, privacy, correction, and removal; how disputes and appeals would work; how cross-border cultural heritage and intellectual-property rules apply; and what happens to previously downloaded copies or sublicenses after a permission expires or is revoked. No answers are claimed by this prototype.
+Those fields do not independently authenticate the named person, prove that the person holds the stated authority, validate an outside document, establish that a work is authentic, or prove lawful acquisition. A receipt’s integrity does not add legal force to the statement it records. A “verified” state in the local example describes a narrow, recorded review, not certification by a museum or public authority.
+
+### What this project does not establish
+
+- No real museum, collection, artist, collector, reviewer, rights holder, community, or work participated in the walkthrough.
+- The source data and walkthrough are synthetic. The institution described in the original proposal is not a participant, and its collection records, images, catalog, staff names, and metadata are not used.
+- The project does not establish ownership, copyright, custody, authenticity, absence of looting, cultural value, complete provenance, or legal admissibility of evidence.
+- It does not appoint or accredit reviewers, authenticate real identities, provide legal advice, adjudicate a dispute, or guarantee that a permission is enforceable.
+- It does not connect to a museum, operate a marketplace, publish a cultural work online, or anchor the local record to Stellar.
+- It does not prove that distributed infrastructure creates cooperation or that the project will preserve cultural material permanently.
+
+The project name is not a technical guarantee of permanence. A local record and its receipts can be changed or lost with the systems that hold them; the evidence does not test long-term preservation.
+
+### Questions left open
+
+The design still needs a legitimate process for appointing or recognizing independent reviewers; rules for identity, authority, consent, privacy, evidence access and retention, correction, removal, and appeals; and a way to handle contradictory custody claims. It also needs legal review of cultural heritage and intellectual-property questions, including cross-border cases. The effect of expiry or revocation on previously downloaded copies or sublicenses is unresolved. The prototype does not answer who would decide these issues or on what evidence.
+
+### Reading this page with the test results
+
+The suite tests local rules such as reviewer separation, evidence presence, permission scope, expiry, revocation, and receipt integrity. A successful test shows that the local code produced the expected result for that input. It does not show that the rule matches law, that a real participant satisfies it, or that the external evidence is true. For the exact reported suite and security-review scope, see [Evidence](./EVIDENCE.md). For the fictional case and local model, see [How it works](./HOW_IT_WORKS.md).
 
 ## Español
 
-El acuerdo del proyecto no cita una ley como fundamento de diseño y señala que para esta etapa no se consultó una fuente jurídica o patrimonial primaria. Las notas del proyecto enumeran la Ley chilena 17.288 de Monumentos Nacionales, la Ley 17.336 de Propiedad Intelectual y la Ley 21.719 de Datos Personales como temas para investigar en el futuro. Aquí no se revisaron sus textos vigentes, aplicabilidad, interpretación ni efectos. No se afirma cumplimiento legal y ninguna persona profesional competente en derecho ha revisado este material.
+Permamuseum es un estudio técnico local sobre cómo un registro podría distinguir afirmaciones acerca de obras culturales, las referencias que las respaldan, una revisión acotada y un permiso para un uso nombrado. No determina derechos jurídicos ni hechos culturales. Para la etapa registrada no se consultó una fuente jurídica o patrimonial primaria y ninguna persona profesional competente en derecho revisó este material. El proyecto no afirma cumplir una ley o reglamento.
 
-El prototipo registra afirmaciones y permisos acotados. No da valor jurídico a la procedencia, no decide propiedad ni derechos de autor, no establece la autoridad de quien concede un permiso, no certifica autenticidad, no prueba ausencia de saqueo ni determina admisibilidad probatoria. Permamuseum no es un museo, colección, piloto institucional ni certificación cultural real. No verifica identidades reales, la verdad de evidencia externa ni el valor cultural de una obra; no promete preservación permanente ni impide el saqueo, y su nombre no promete almacenamiento permanente. El proyecto no demuestra que un registro distribuido produzca cooperación. Una firma técnica, un hash o un recibo del kernel solo acredita la comprobación técnica descrita en su registro. El uso de Stellar es una hipótesis de arquitectura; el recorrido documentado es local y no tiene anclaje externo.
+### Qué puede decir un registro
 
-Todo el trabajo descrito para este proyecto usa datos sintéticos. El recorrido no contiene registros reales de museos, colecciones, artistas, coleccionistas, revisores ni evidencias personales. La institución real descrita en la propuesta original no participa y no se usan sus registros, imágenes, catálogo, nombres de personal ni metadatos.
+Un registro puede identificar quién hizo una declaración en el ejemplo, qué autoridad afirma tener, qué referencias nombró, qué versión se revisó, qué cubrió el mandato de la persona revisora, qué quedó fuera y qué uso nombra un permiso. Puede conservar una laguna, un desacuerdo, un vencimiento o un rechazo explícitos. Un recibo técnico puede ayudar a mostrar que la operación almacenada no cambió desde la comprobación de integridad correspondiente.
 
-Entre las preguntas abiertas están quién podría nombrar o acreditar a una persona revisora independiente; qué reglas deben regir identidad, autoridad, derechos, conservación de evidencia, privacidad, corrección y retirada; cómo funcionarían las disputas y apelaciones; cómo se aplicarían reglas patrimoniales y de propiedad intelectual entre países; y qué ocurre con copias descargadas o sublicencias después de vencer o revocarse un permiso. Este prototipo no ofrece respuestas.
+Esos campos no autentican por sí mismos a la persona nombrada, no prueban que tenga la autoridad que declara, no validan un documento externo, no establecen la autenticidad de una obra ni prueban una adquisición lícita. La integridad de un recibo no da fuerza jurídica adicional a la declaración registrada. Un estado «verificado» en el ejemplo local describe una revisión acotada y registrada, no una certificación de un museo o autoridad pública.
+
+### Qué no establece este proyecto
+
+- En el recorrido no participaron museos, colecciones, artistas, coleccionistas, revisores, titulares de derechos, comunidades ni obras reales.
+- Los datos y el recorrido son sintéticos. La institución descrita en la propuesta original no participa y no se usan registros de su colección, imágenes, catálogo, nombres de personal ni metadatos.
+- El proyecto no establece propiedad, derechos de autor, custodia, autenticidad, ausencia de saqueo, valor cultural, procedencia completa ni admisibilidad jurídica de evidencia.
+- No nombra ni acredita personas revisoras, no autentica identidades reales, no entrega asesoría jurídica, no resuelve disputas ni garantiza que un permiso sea exigible.
+- No se conecta a un museo, no opera un marketplace, no publica una obra cultural en internet ni ancla el registro local en Stellar.
+- No demuestra que una infraestructura distribuida produzca cooperación ni que el proyecto preserve materiales culturales de forma permanente.
+
+El nombre del proyecto no es una garantía técnica de permanencia. Un registro local y sus recibos pueden cambiarse o perderse junto con los sistemas que los contienen; la evidencia no prueba conservación a largo plazo.
+
+### Preguntas pendientes
+
+El diseño aún necesita un proceso legítimo para nombrar o reconocer revisores independientes; reglas sobre identidad, autoridad, consentimiento, privacidad, acceso y conservación de evidencia, corrección, retirada y apelaciones; y un modo de tratar afirmaciones de custodia contradictorias. También necesita una revisión jurídica de patrimonio cultural y propiedad intelectual, incluidos los casos entre países. No se ha resuelto qué ocurre con copias ya descargadas o sublicencias después del vencimiento o revocación. El prototipo no determina quién decidiría estos asuntos ni con qué evidencia.
+
+### Cómo leer esta página junto con las pruebas
+
+La suite comprueba reglas locales como separación de la persona revisora, presencia de evidencia, alcance del permiso, vencimiento, revocación e integridad del recibo. Una prueba aprobada muestra que el código local produjo el resultado esperado para esa entrada. No demuestra que la regla coincida con la ley, que una persona participante real la cumpla ni que la evidencia externa sea verdadera. Consulta [Evidencia](./EVIDENCE.md) para conocer la suite informada y el alcance de la revisión de seguridad. [Cómo funciona](./HOW_IT_WORKS.md) describe el caso ficticio y el modelo local.

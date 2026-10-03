@@ -1,57 +1,83 @@
-# Evidence
+# Evidence / Evidencia
 
 ## English
 
-The source material records a local run dated 2026-10-03. The filenames below refer to that excluded source material; this public repository summarizes those reports but does not include their raw files or the test code. The run is not evidence of an operation on Stellar. No blockchain was activated and the run states that it used no network.
+This page summarizes dated project records from 2026-10-03. The records describe a local run using synthetic data and no network. The public repository does not contain the source code, test files, raw run logs, or the excluded project workspace. Read the numbers as the project’s captured report, not as a test run a reader can reproduce from this repository.
 
-### What the recorded checks cover
+### What was recorded
 
-| Evidence | What it covers | Recorded result |
+| Record | What it covers | Reported result |
 | --- | --- | --- |
-| `suite-hoy.txt` and `2026-10-03-verde.txt` | The recorded post-implementation suite, with checks grouped below. | 37 tests; 37 passed; 0 failed; 0 skipped. |
-| `2026-10-03-rojo.txt` | The pre-implementation RED phase for 25 adversarial cases. | Each case failed for its expected reason; the three controls were green. |
-| `2026-10-03-recorrido.txt` | A local synthetic walkthrough using kernel receipts. | Seven accepted steps and one rejection for `evidencia-vacia`; no network or external anchor. |
-| `2026-10-03-mutaciones.txt` | Six isolated rule mutations and focused checks. | All six mutations were detected; original source was restored. |
-| `docs/SEGURIDAD.md` in the source material | Local security review of output paths, verification claims, terminal control characters, and known limitations. | Reports four security tests passing in the corrected state; it is not an independent audit. |
+| Post-implementation suite | Named behavior checks, controls, receipt validation, kernel provenance, local path handling, and terminal output. | 37 passed, 0 failed, 0 skipped. |
+| Adversarial RED phase | 25 cases written before implementation, with three valid controls. | All 25 adversarial cases failed for their expected reasons; the three controls passed. |
+| Local walkthrough | Synthetic principal, work, custody declaration, references, review, permission, publication decision, and empty-evidence rejection. | Seven accepted operations and one rejection for `evidencia-vacia`. |
+| Mutation sweep | Six isolated changes to rules with focused checks. | All six changes were detected; the original source was restored. |
+| Local security review | Output path containment, evidence-backed verification, terminal control characters, and stated limitations. | Four security checks reported passing after fixes. The review was local, not independent. |
 
-The suite names its kernel-provenance checks `el kit instalado declara los cinco módulos del núcleo`, `el núcleo consumido coincide con la tabla de digest del kit`, `las copias presentes en los hosts coinciden byte a byte`, and `los módulos instalados declaran el mismo commit`. Its walkthrough check is `el recorrido real obtiene aceptaciones verificables y conserva el rechazo`.
+The GREEN suite contains the five kernel and walkthrough checks below, 25 adversarial rule checks, three valid controls, two further verification checks, and two security checks. Its named cases include unverified publication, claimant and reviewer separation, empty and repeated evidence, conflicting custody claims, royalty ceilings, expiry and revocation, stale evidence, token permission boundaries, missing custody actors, reviewer conflicts, and actionable rejection output. The names and exact recorded test totals are in the captured suite summary, but those raw files are not published here.
 
-The 25 adversarial checks are named `01 museo sin verificar no publica`, `02 declarante y verificador no pueden ser la misma parte`, `03 evidencia vacía no se revisa`, `04 referencias repetidas no son fuentes independientes`, `05 procedencias incompatibles de una obra chocan`, `06 regalía superior al techo autorizado se rechaza`, `07 permiso vencido no autoriza uso`, `08 permiso revocado no autoriza uso posterior`, `09 recibo repetido no reactiva operación revocada`, `10 dos museos no reclaman procedencia exclusiva de la misma obra`, `11 identidad de cobro duplicada no duplica regalía`, `12 indicios documentados de saqueo bloquean la venta`, `13 texto libre verificado no es dictamen estructurado`, `14 administrador único no acredita verificación`, `15 contradicción en evidencia deja la afirmación impugnada`, `16 autoridad vencida bloquea publicación`, `17 principal no escribe en espacio ajeno`, `18 permiso exige obra identificada y derechos declarados`, `19 uso fuera del alcance concedido se rechaza`, `20 un token no transfiere permiso sin cláusula expresa`, `21 salto de custodia sin actor o evidencia queda incompleto`, `22 dictamen de evidencia anterior no verifica la versión actual`, `23 ejecutor no verifica su propio efecto`, `24 permiso revocado requiere nueva concesión para reactivarse`, and `25 rechazo identifica resolver y dato faltante`.
+### What the adversarial phase found
 
-The three control checks are `CONTROL: un dictamen textual no publica sin recibo verificable del núcleo`, `CONTROL: permiso acotado válido cubre el uso pedido`, and `CONTROL: dictamen válido tiene mandato, evidencia y verificador independiente`. Two additional verification checks are `una afirmación textual o booleana no basta para marcar publicación verificada` and `un objeto de dictamen escrito en datos sin recibo del núcleo no verifica`. The suite also names `la resolución de rutas rechaza ubicaciones fuera del repositorio` and `la salida escapa controles terminales y saltos de línea del nombre del museo`.
+The RED run asked whether the planned rules could reject specific bad states before they were implemented. Its cases cover a museum publishing without review, one party declaring and reviewing the same claim, empty or duplicated references, incompatible provenance claims, a royalty over its stated ceiling, expired or revoked permissions, stale receipts, duplicated payee identity, documented looting indicators, free text or a single administrator asserting “verified,” contradictions in evidence, authority expiry, writing into another institution’s space, permissions without an identified work, use beyond the grant, token ownership being treated as a permission, incomplete custody, evidence changing after review, an executor reviewing their own effect, and a rejection with no path to resolve it. Each case failed for its expected reason before implementation. This is evidence that the tests expressed those failure expectations, not that the failures were observed at real institutions.
 
-The captured RED report lists expected failures before implementation; it does not establish that these cases occur in real institutions.
+The later mutation sweep changed six rules one at a time: claimant and reviewer independence, the royalty ceiling, expiration, revocation, permission scope, and the actor/evidence required for a custody event. Each focused test detected its change. That provides a small check that those tests react to changes in the corresponding rules; it is not a complete measure of test quality.
 
-### Kernel consumption and the current report
+### Kernel identity and the digest check
 
-Permamuseum does not pin and install a private kernel copy in the way described for the other nine projects. Its code and checks discover the installed Vespi kernel through paths, modules, and a digest table, following the approach named in the project notes for Marea. The source phase report says the active OpenCode copy was readable, four kernel-provenance checks covered its five modules, and the walkthrough consumed real kernel receipts without modifying the installed copy. The test names in `suite-hoy.txt` include those provenance checks.
+Permamuseum does not bundle or pin a private kernel copy. The project notes say the code discovers the installed Vespi kernel by paths and modules, then compares it with the kit’s fixed digest table. The suite reports four kernel-provenance checks:
 
-The figures above come from the captured project report in `_fuentes/suite-hoy.txt`, with the supporting dated RED, GREEN, walkthrough, and mutation records. This documentation-only repository omits source and test files, so its `npm test` invocation finds zero tests and cannot independently reproduce the captured run. When code is opened, rerun it from the code root and compare its output with the published evidence. The testnet token phase remains pending its stated parameters; this evidence contains no testnet transaction.
+- the installed kit declares five kernel modules;
+- the consumed kernel matches the digest table;
+- available host copies match byte for byte;
+- installed modules declare the same commit.
+
+A digest is a technical fingerprint of the specific files compared. Matching it helps answer, “Which kernel copy did this run consume?” It does not answer, “Is the cultural claim true?” It cannot authenticate a person, a document, a mandate, a work, ownership, or legal authority. The local walkthrough used real kernel receipts and reports that their integrity checks passed, without modifying the installed kernel copy. The published report does not provide the code or the digest values, so this repository cannot independently repeat that comparison.
+
+### What can and cannot be checked here
+
+The reported run states that it had no network, did not turn on a blockchain, and did not simulate an external anchor. No Stellar operation, testnet transaction, or internet publication is recorded. The evidence summary does not establish museum participation, real-world provenance, object authenticity, legal title, permission authority, complete custody, cultural value, legal compliance, permanent preservation, or production readiness.
+
+The four local security checks address a bounded set of code paths. They report that paths outside the repository and symbolic-link paths were rejected, that a text or boolean verification and an unreceipted opinion were insufficient, and that terminal control characters were escaped. The review also names unresolved limits: input size is not bounded, all input fields do not have an exhaustive schema, and concurrent hostile filesystem changes are outside its protection. It did not review a network service, marketplace, wallet, or token integration. The report expressly says it is not an independent security audit.
+
+Because this public repository contains documentation only, running a test command here cannot reproduce the captured suite. When source code is opened for review, the test results need to be checked against that code and its installed kernel. The project’s publication terms are in [Code not included](../CODE_NOT_INCLUDED.md) and [LICENSE](../LICENSE).
 
 ## Español
 
-El material fuente registra una corrida local fechada el 2026-10-03. Los nombres de archivo de abajo corresponden a ese material excluido; este repositorio público resume esos informes, pero no incluye sus archivos originales ni el código de las pruebas. La corrida no es evidencia de una operación en Stellar. No se activó blockchain y el registro indica que no hubo red.
+Esta página resume registros fechados del proyecto el 2026-10-03. Describen una corrida local con datos sintéticos y sin red. El repositorio público no contiene código fuente, archivos de pruebas, registros completos de ejecución ni el espacio de trabajo excluido. Las cifras corresponden al informe capturado por el proyecto; no son una corrida que se pueda reproducir desde este repositorio.
 
-### Qué cubren las comprobaciones registradas
+### Qué se registró
 
-| Evidencia | Qué cubre | Resultado registrado |
+| Registro | Qué cubre | Resultado informado |
 | --- | --- | --- |
-| `suite-hoy.txt` y `2026-10-03-verde.txt` | La suite registrada posterior a la implementación, con comprobaciones con nombre agrupadas abajo. | 37 pruebas; 37 aprobadas; 0 fallidas; 0 omitidas. |
-| `2026-10-03-rojo.txt` | Fase RED previa a la implementación para 25 casos adversariales. | Cada caso falló por el motivo esperado; los tres controles estaban verdes. |
-| `2026-10-03-recorrido.txt` | Recorrido local sintético con recibos del kernel. | Siete pasos aceptados y un rechazo por `evidencia-vacia`; sin red ni anclaje externo. |
-| `2026-10-03-mutaciones.txt` | Seis mutaciones aisladas de reglas y comprobaciones focalizadas. | Se detectaron las seis mutaciones; se restauró el código original. |
-| `docs/SEGURIDAD.md` del material fuente | Revisión local de seguridad de rutas de salida, afirmaciones de verificación, controles de terminal y límites conocidos. | Informa cuatro pruebas de seguridad aprobadas en el estado corregido; no es una auditoría independiente. |
+| Suite posterior a la implementación | Comprobaciones nombradas de comportamiento, controles, validación de recibos, procedencia del kernel, rutas locales y salida de terminal. | 37 aprobadas, 0 fallidas, 0 omitidas. |
+| Fase adversarial RED | 25 casos escritos antes de implementar, con tres controles válidos. | Los 25 casos adversariales fallaron por los motivos previstos; los tres controles se aprobaron. |
+| Recorrido local | Principal, obra, declaración de custodia, referencias, dictamen, permiso, decisión de publicación y rechazo por evidencia vacía, todo sintético. | Siete operaciones aceptadas y un rechazo por `evidencia-vacia`. |
+| Barrido de mutaciones | Seis cambios aislados de reglas con comprobaciones focalizadas. | Se detectaron los seis cambios; se restauró el código original. |
+| Revisión local de seguridad | Contención de rutas, verificación respaldada por evidencia, controles de terminal y límites declarados. | Se informan cuatro comprobaciones de seguridad aprobadas tras las correcciones. La revisión fue local, no independiente. |
 
-Las comprobaciones de procedencia del kernel se llaman `el kit instalado declara los cinco módulos del núcleo`, `el núcleo consumido coincide con la tabla de digest del kit`, `las copias presentes en los hosts coinciden byte a byte` y `los módulos instalados declaran el mismo commit`. La comprobación del recorrido se llama `el recorrido real obtiene aceptaciones verificables y conserva el rechazo`.
+La suite GREEN contiene las cinco comprobaciones del kernel y del recorrido que se describen abajo, 25 comprobaciones de reglas adversariales, tres controles válidos, dos comprobaciones adicionales de verificación y dos comprobaciones de seguridad. Entre los casos nombrados están publicación institucional sin revisión, separación entre declarante y persona revisora, evidencia vacía o repetida, procedencias incompatibles, topes de regalía, vencimiento y revocación, evidencia antigua, límites de permisos y tokens, actores faltantes en custodia, conflictos de revisión y rechazos sin salida accionable. Los nombres y totales exactos están en el resumen de suite capturado, que no se publica aquí como archivo bruto.
 
-Los 25 casos adversariales se llaman `01 museo sin verificar no publica`, `02 declarante y verificador no pueden ser la misma parte`, `03 evidencia vacía no se revisa`, `04 referencias repetidas no son fuentes independientes`, `05 procedencias incompatibles de una obra chocan`, `06 regalía superior al techo autorizado se rechaza`, `07 permiso vencido no autoriza uso`, `08 permiso revocado no autoriza uso posterior`, `09 recibo repetido no reactiva operación revocada`, `10 dos museos no reclaman procedencia exclusiva de la misma obra`, `11 identidad de cobro duplicada no duplica regalía`, `12 indicios documentados de saqueo bloquean la venta`, `13 texto libre verificado no es dictamen estructurado`, `14 administrador único no acredita verificación`, `15 contradicción en evidencia deja la afirmación impugnada`, `16 autoridad vencida bloquea publicación`, `17 principal no escribe en espacio ajeno`, `18 permiso exige obra identificada y derechos declarados`, `19 uso fuera del alcance concedido se rechaza`, `20 un token no transfiere permiso sin cláusula expresa`, `21 salto de custodia sin actor o evidencia queda incompleto`, `22 dictamen de evidencia anterior no verifica la versión actual`, `23 ejecutor no verifica su propio efecto`, `24 permiso revocado requiere nueva concesión para reactivarse` y `25 rechazo identifica resolver y dato faltante`.
+### Qué encontró la fase adversarial
 
-Los tres controles se llaman `CONTROL: un dictamen textual no publica sin recibo verificable del núcleo`, `CONTROL: permiso acotado válido cubre el uso pedido` y `CONTROL: dictamen válido tiene mandato, evidencia y verificador independiente`. Hay además dos comprobaciones de verificación: `una afirmación textual o booleana no basta para marcar publicación verificada` y `un objeto de dictamen escrito en datos sin recibo del núcleo no verifica`. La suite también nombra `la resolución de rutas rechaza ubicaciones fuera del repositorio` y `la salida escapa controles terminales y saltos de línea del nombre del museo`.
+La corrida RED preguntó si las reglas planificadas podían rechazar estados indebidos antes de implementarse. Sus casos cubren una publicación sin revisión, una misma parte que declara y revisa, referencias vacías o duplicadas, afirmaciones de procedencia incompatibles, una regalía por sobre su techo, permisos vencidos o revocados, recibos antiguos, identidad de cobro duplicada, indicios documentados de saqueo, texto libre o una persona administradora afirmando «verificado», contradicciones en la evidencia, vencimiento de autoridad, escritura en el espacio de otra institución, permisos sin obra identificada, usos que exceden la concesión, tokens tratados como permisos, custodia incompleta, evidencia cambiada tras la revisión, una persona ejecutora revisando su propio efecto y un rechazo sin vía de resolución. Cada caso falló por el motivo previsto antes de implementar. Esto demuestra que las pruebas expresaban esas expectativas de fallo, no que tales fallos se observaran en instituciones reales.
 
-El informe RED capturado enumera fallos esperados antes de implementar; no demuestra que estos casos ocurran en instituciones reales.
+El barrido posterior cambió seis reglas de una en una: independencia entre declarante y persona revisora, techo de regalía, vencimiento, revocación, alcance del permiso y actor/evidencia exigidos para un evento de custodia. Cada prueba focalizada detectó el cambio. Es una comprobación acotada de que esas pruebas reaccionan a cambios en las reglas correspondientes; no mide por completo la calidad de la suite.
 
-### Consumo del kernel y el informe actual
+### Identidad del kernel y comprobación por digest
 
-Permamuseum no fija ni instala una copia privada del kernel como se describe para los otros nueve proyectos. Su código y sus comprobaciones descubren el kernel instalado de Vespi mediante rutas, módulos y una tabla de digest, siguiendo el enfoque que las notas del proyecto atribuyen a Marea. El informe de fases dice que la copia activa de OpenCode era legible, que cuatro comprobaciones de procedencia cubrían sus cinco módulos y que el recorrido consumió recibos reales del kernel sin modificar la copia instalada. Los nombres de las pruebas en `suite-hoy.txt` incluyen esas comprobaciones de procedencia.
+Permamuseum no incluye ni fija una copia privada del kernel. Las notas del proyecto dicen que el código encuentra el kernel instalado de Vespi mediante rutas y módulos, y luego lo compara con la tabla de digest fijada por el kit. La suite informa cuatro comprobaciones de procedencia del kernel:
 
-Los resultados provienen del informe capturado del proyecto en `_fuentes/suite-hoy.txt`, junto con los registros fechados RED, GREEN, recorrido y mutaciones. Este repositorio de documentación no incluye archivos de código ni pruebas; por eso, su ejecución de `npm test` aquí encuentra cero pruebas y no reproduce de forma independiente la corrida capturada. Cuando se abra el código, vuelve a ejecutarlo desde la raíz del código y compara el resultado con la evidencia publicada. La fase del token en testnet sigue pendiente de los parámetros indicados; esta evidencia no contiene transacciones de testnet.
+- el kit instalado declara cinco módulos del kernel;
+- el kernel consumido coincide con la tabla de digest;
+- las copias disponibles en los hosts coinciden byte a byte;
+- los módulos instalados declaran el mismo commit.
+
+Un digest es una huella técnica de los archivos comparados. Al coincidir, ayuda a responder: «¿Qué copia del kernel consumió esta corrida?». No responde: «¿Es verdadera la afirmación cultural?». No autentica a una persona, un documento, un mandato, una obra, la propiedad ni la autoridad jurídica. El recorrido local usó recibos reales del kernel y el informe dice que pasaron las comprobaciones de integridad, sin modificar la copia instalada. El informe publicado no incluye código ni valores de digest, por lo que este repositorio no permite repetir la comparación de forma independiente.
+
+### Qué se puede comprobar aquí y qué no
+
+El informe de la corrida dice que no hubo red, blockchain activa ni anclaje externo simulado. No registra operaciones en Stellar, transacciones de testnet ni publicación en internet. El resumen de evidencia no establece participación de un museo, procedencia real, autenticidad de una obra, titularidad jurídica, autoridad del permiso, custodia completa, valor cultural, cumplimiento legal, preservación permanente ni preparación para producción.
+
+Las cuatro comprobaciones locales de seguridad cubren un conjunto acotado de rutas de código. Informan que se rechazaron rutas fuera del repositorio y rutas con enlaces simbólicos, que no bastó una verificación textual o booleana ni un dictamen sin recibo, y que se escaparon caracteres de control en la terminal. La revisión también nombra límites pendientes: no se fija un tamaño máximo para la entrada, no hay un esquema exhaustivo de todos sus campos y la protección no cubre cambios hostiles concurrentes del sistema de archivos. No se revisó un servicio de red, marketplace, wallet ni integración de token. El propio informe aclara que no es una auditoría de seguridad independiente.
+
+Como este repositorio público solo contiene documentación, ejecutar aquí un comando de pruebas no reproduciría la suite capturada. Cuando se abra el código para revisión, habrá que contrastar los resultados con ese código y con el kernel instalado. Las condiciones de publicación están en [Código no incluido](../CODE_NOT_INCLUDED.md) y [LICENSE](../LICENSE).
