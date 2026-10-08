@@ -6,7 +6,7 @@
   <a href="./docs/EVIDENCE.md"><img src="https://img.shields.io/badge/suite-37_tests-D7B698?style=for-the-badge&labelColor=07111A" alt="Suite: 37 tests"></a>
   <a href="./docs/HOW_IT_WORKS.md"><img src="https://img.shields.io/badge/agreement-before_code-E0C170?style=for-the-badge&labelColor=07111A" alt="Agreement written before code"></a>
   <a href="https://github.com/andresanemic/vespi"><img src="https://img.shields.io/badge/built_with-Vespi_%C2%B7_Lore_Plugin-E0C170?style=for-the-badge&labelColor=07111A" alt="Built with Vespi and Lore Plugin"></a>
-  <a href="https://github.com/andresanemic/vespi/tree/ed559e83c976dd6e6a379a5510db776206f670b4"><img src="https://img.shields.io/badge/kernel-0.1.5_candidate-ed559e8?style=for-the-badge&labelColor=07111A&color=E0C170" alt="Kernel: 0.1.5 candidate (commit ed559e8)"></a>
+  <a href="https://github.com/andresanemic/vespi/tree/ed559e83c976dd6e6a379a5510db776206f670b4"><img src="https://img.shields.io/badge/kernel-0.1.5_release-ed559e8?style=for-the-badge&labelColor=07111A&color=E0C170" alt="Kernel: 0.1.5 release (commit ed559e8)"></a>
 </p>
 
 <p align="center"><b>A cultural record should show who made a claim, what evidence they named, and what a review can actually establish.</b></p>
@@ -113,7 +113,7 @@ The kernel-provenance checks compare the consumed kernel with the kit’s fixed 
 
 ## How Permamuseum relates to Vespi and Lore Plugin
 
-The recorded local walkthrough consumes Vespi kernel receipts and checks their integrity. Its project notes say the active kernel is discovered through paths, modules, and a digest table rather than bundled as a private copy. The project targets kernel **0.1.5 candidate** (commit `ed559e8`); the re-pinned digest table will be committed once the kernel release is confirmed. Lore Plugin supplies the project's written criteria and routing context. This relationship does not make either kernel receipts or project criteria evidence of an object's history. The checks recorded here cover the consumed kernel copy, not a live museum workflow. Visit [Vespi](https://github.com/andresanemic/vespi) and [Lore Plugin](https://github.com/andresanemic/lore-plugin) to see those projects.
+The recorded local walkthrough consumes Vespi kernel receipts and checks their integrity. Its project notes say the active kernel is discovered through paths, modules, and a digest table rather than bundled as a private copy. The project targets kernel **0.1.5 release** (commit `ed559e8`); the digest table remains pending until a deliberate project re-pin and fresh tests are completed. Lore Plugin supplies the project's written criteria and routing context. This relationship does not make either kernel receipts or project criteria evidence of an object's history. The checks recorded here cover the consumed kernel copy, not a live museum workflow. Visit [Vespi](https://github.com/andresanemic/vespi) and [Lore Plugin](https://github.com/andresanemic/lore-plugin) to see those projects.
 
 ## Economy and PERMA
 
@@ -239,7 +239,7 @@ Las comprobaciones de procedencia comparan el kernel consumido con la tabla de d
 
 ## Relación de Permamuseum con Vespi y Lore Plugin
 
-El recorrido local registrado consume recibos del kernel de Vespi y comprueba su integridad. Las notas del proyecto dicen que el kernel activo se descubre mediante rutas, módulos y una tabla de digest, en vez de incluirlo como copia privada. El proyecto apunta al kernel **0.1.5 candidato** (commit `ed559e8`); la tabla de digest fijada se commiteará una vez confirmado el release del kernel. Lore Plugin aporta los criterios escritos del proyecto y el contexto de enrutamiento. Esta relación no convierte los recibos del kernel ni los criterios del proyecto en evidencia de la historia de una obra. Las comprobaciones aquí registradas cubren la copia consumida del kernel, no un flujo de trabajo activo en un museo. Puedes conocer esos proyectos en [Vespi](https://github.com/andresanemic/vespi) y [Lore Plugin](https://github.com/andresanemic/lore-plugin).
+El recorrido local registrado consume recibos del kernel de Vespi y comprueba su integridad. Las notas del proyecto dicen que el kernel activo se descubre mediante rutas, módulos y una tabla de digest, en vez de incluirlo como copia privada. El proyecto apunta al kernel **0.1.5 publicado** (commit `ed559e8`); la tabla de digest sigue pendiente hasta que se refije deliberadamente el proyecto y se repitan las pruebas. Lore Plugin aporta los criterios escritos del proyecto y el contexto de enrutamiento. Esta relación no convierte los recibos del kernel ni los criterios del proyecto en evidencia de la historia de una obra. Las comprobaciones aquí registradas cubren la copia consumida del kernel, no un flujo de trabajo activo en un museo. Puedes conocer esos proyectos en [Vespi](https://github.com/andresanemic/vespi) y [Lore Plugin](https://github.com/andresanemic/lore-plugin).
 
 ## Economía y PERMA
 
