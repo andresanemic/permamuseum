@@ -1,4 +1,8 @@
-[![Permamuseum: cultural claims, evidence and permissions](./assets/cover.png)](./assets/cover.png)
+<p align="center">
+  <a href="./assets/cover.png"><img src="./assets/cover.png" alt="Permamuseum: cultural claims, evidence and permissions" width="100%"></a>
+</p>
+
+<h1 align="center">Permamuseum</h1>
 
 <p align="center">
   <a href="#english"><img src="https://img.shields.io/badge/status-local_walkthrough-D7B698?style=for-the-badge&labelColor=07111A" alt="Status: local walkthrough"></a>
@@ -12,7 +16,8 @@
 <p align="center"><b>Permamuseum</b> — in a museum, "verified" often mixes three things: what is claimed about a work, the evidence behind it, and permission to use it.<br>
 Each decision has a clear authority, and a limited assessment never passes for certainty. Evidence: 52/52 tests. Fictional institution, artwork and people.</p>
 
-<p align="center"><b>A cultural record should show who made a claim, what evidence they named, and what a review can actually establish.</b></p>
+<p align="center"><b>We’re applying to the Find Your Way hackathon and plan to participate in Meridian.</b></p>
+<p align="center"><b>For judges:</b> <a href="./docs/HOW_IT_WORKS.md">How it works</a> · <a href="./docs/EVIDENCE.md">Evidence</a> · <a href="./docs/LEGAL_AND_LIMITS.md">Limits</a> · <a href="./CODE_NOT_INCLUDED.md">Source and review terms</a>.<br>This public snapshot contains documentation and evidence, not runnable source.</p>
 
 ---
 
@@ -30,16 +35,6 @@ Each decision has a clear authority, and a limited assessment never passes for c
 A museum may hold an object, an artist may hold rights in an image, a researcher may assess a document, and a platform may display a record. Those are different relationships. If a page reduces them all to a green “verified” mark, a reader cannot tell who made the claim, what was checked, whose authority was relied on, or which use was allowed. The record may look settled even when the evidence has a gap or the reviewer had no mandate.
 
 Permamuseum starts with that ordinary uncertainty. A custody record can have a missing earlier period. A permission can cover a descriptive digital display without covering a sale or a token mint. A review can confirm that named references were present in an example file without confirming the object, the source documents, or legal title. Keeping those distinctions readable gives a reviewer a reasoned next question instead of a label that asks to be trusted.
-
-## If you are judging Find Your Way or Meridian, start here
-
-Read the project foundation and its walkthrough. Start with [How it works](./docs/HOW_IT_WORKS.md).
-
-Open the test record. See [Evidence](./docs/EVIDENCE.md).
-
-Read the legal and verification limits. See [Legal and limits](./docs/LEGAL_AND_LIMITS.md).
-
-Review the publication conditions. See [Code not included](./CODE_NOT_INCLUDED.md) and the [review-only license](./LICENSE).
 
 ## In one minute
 
@@ -146,6 +141,8 @@ Start with [How it works](./docs/HOW_IT_WORKS.md) for the model and synthetic ca
 
 <details>
 <summary><b>Leer en español</b></summary>
+
+<p align="center"><b>Postulamos a la hackatón Find Your Way y planeamos participar en Meridian.</b></p>
 
 <p align="center"><b>Permamuseum</b> — en un museo, «verificado» suele mezclar tres cosas: lo que se afirma de una obra, la evidencia detrás y el permiso para usarla.<br>
 Cada decisión tiene una autoridad clara, y una evaluación limitada nunca pasa por certeza. Evidencia: 52/52 pruebas. Institución, obras y personas ficticias.</p>
