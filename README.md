@@ -142,9 +142,6 @@ Start with [How it works](./docs/HOW_IT_WORKS.md) for the model and synthetic ca
 <details>
 <summary><b>Leer en español</b></summary>
 
-<p align="center"><b>Permamuseum</b> — en un museo, «verificado» suele mezclar tres cosas: lo que se afirma de una obra, la evidencia detrás y el permiso para usarla.<br>
-Cada decisión tiene una autoridad clara, y una evaluación limitada nunca pasa por certeza. Evidencia: 52/52 pruebas. Institución, obras y personas ficticias.</p>
-
 ## El proyecto en una frase
 
 **Permamuseum mantiene visibles, como partes distintas de un mismo registro, las afirmaciones culturales, su evidencia, las revisiones acotadas y los permisos para usos concretos.**
