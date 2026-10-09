@@ -9,13 +9,10 @@
   <a href="https://github.com/andresanemic/vespi/tree/ed559e83c976dd6e6a379a5510db776206f670b4"><img src="https://img.shields.io/badge/kernel-0.1.5_commit-ed559e8?style=for-the-badge&labelColor=07111A&color=E0C170" alt="Kernel: 0.1.5 (commit ed559e8)"></a>
 </p>
 
-<p align="center">
-A fictional museum, the Museo Nimbo de la Laguna Azul, meets an invented vessel. / Un museo ficticio, el Museo Nimbo de la Laguna Azul, encuentra una vasija inventada.<br>
-The jam: a green "verified" mark cannot say who claimed, what was checked, or which use was allowed. / El atasco: una marca verde de «verificado» no dice quién afirmó, qué se revisó ni qué uso se permitió.<br>
-Permamuseum separates claim, evidence, bounded review, permission, and receipt in one record. / Permamuseum separa afirmación, evidencia, revisión acotada, permiso y recibo en un mismo registro.<br>
-Recorded evidence: 52 tests, 52 passing. / Evidencia registrada: 52 pruebas, 52 aprobadas.<br>
-Every institution, person, work, and reference is invented. / Cada institución, persona, obra y referencia es inventada.
-</p>
+<p align="center"><b>Permamuseum</b> — in a museum, "verified" often mixes three things: what is claimed about a work, the evidence behind it, and permission to use it.<br>
+Each decision has a clear authority, and a limited assessment never passes for certainty. Evidence: 52/52 tests. Fictional institution, artwork and people.<br>
+<b>Permamuseum</b> — en un museo, «verificado» suele mezclar tres cosas: lo que se afirma de una obra, la evidencia detrás y el permiso para usarla.<br>
+Cada decisión tiene una autoridad clara, y una evaluación limitada nunca pasa por certeza. Evidencia: 52/52 pruebas. Institución, obras y personas ficticias.</p>
 
 <p align="center"><b>A cultural record should show who made a claim, what evidence they named, and what a review can actually establish.</b></p>
 
