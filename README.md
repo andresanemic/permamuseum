@@ -7,14 +7,16 @@
 <p align="center">
   <a href="#english"><img src="https://img.shields.io/badge/status-local_walkthrough-D7B698?style=for-the-badge&labelColor=07111A" alt="Status: local walkthrough"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-review--only-D7B698?style=for-the-badge&labelColor=07111A" alt="License: review only"></a>
-  <a href="./docs/EVIDENCE.md"><img src="https://img.shields.io/badge/suite-52_tests-D7B698?style=for-the-badge&labelColor=07111A" alt="Suite: 52 tests"></a>
-  <a href="./docs/HOW_IT_WORKS.md"><img src="https://img.shields.io/badge/agreement-before_code-E0C170?style=for-the-badge&labelColor=07111A" alt="Agreement written before code"></a>
+  <a href="./docs/EVIDENCE.md"><img src="https://img.shields.io/badge/suite-52_of_52_pass-D7B698?style=for-the-badge&labelColor=07111A" alt="Suite: 52 of 52 tests pass"></a>
+  <a href="./docs/HOW_IT_WORKS.md"><img src="https://img.shields.io/badge/agreement-written_before_code-E0C170?style=for-the-badge&labelColor=07111A" alt="Agreement written before code"></a>
   <a href="https://github.com/andresanemic/vespi"><img src="https://img.shields.io/badge/built_with-Vespi_%C2%B7_Lore_Plugin-E0C170?style=for-the-badge&labelColor=07111A" alt="Built with Vespi and Lore Plugin"></a>
-  <a href="https://github.com/andresanemic/vespi/tree/ed559e83c976dd6e6a379a5510db776206f670b4"><img src="https://img.shields.io/badge/kernel-0.1.5_commit-ed559e8?style=for-the-badge&labelColor=07111A&color=E0C170" alt="Kernel: 0.1.5 (commit ed559e8)"></a>
+  <a href="https://github.com/andresanemic/vespi/tree/ed559e83c976dd6e6a379a5510db776206f670b4"><img src="https://img.shields.io/badge/kernel-0.1.5_release-ed559e8?style=for-the-badge&labelColor=07111A&color=E0C170" alt="Kernel: 0.1.5 release (commit ed559e8)"></a>
 </p>
 
 <p align="center"><b>Permamuseum</b> — in a museum, "verified" often mixes three things: what is claimed about a work, the evidence behind it, and permission to use it.<br>
 Each decision has a clear authority, and a limited assessment never passes for certainty. Evidence: 52/52 tests. Fictional institution, artwork and people.</p>
+
+<p align="center"><a href="#english"><b>Read in English</b></a> · <a href="#espanol"><b>Leer en español</b></a></p>
 
 <p align="center"><b>We’re applying to the Find Your Way hackathon and plan to participate in Meridian.</b></p>
 <p align="center"><b>For judges:</b> <a href="./docs/HOW_IT_WORKS.md">How it works</a> · <a href="./docs/EVIDENCE.md">Evidence</a> · <a href="./docs/LEGAL_AND_LIMITS.md">Limits</a> · <a href="./CODE_NOT_INCLUDED.md">Source and review terms</a>.<br>This public snapshot contains documentation and evidence, not runnable source.</p>
@@ -23,6 +25,8 @@ Each decision has a clear authority, and a limited assessment never passes for c
 
 <details>
 <summary><b>Read in English</b></summary>
+
+<a id="english"></a>
 
 ## The project in one line
 
@@ -141,6 +145,8 @@ Start with [How it works](./docs/HOW_IT_WORKS.md) for the model and synthetic ca
 
 <details>
 <summary><b>Leer en español</b></summary>
+
+<a id="espanol"></a>
 
 ## El proyecto en una frase
 
