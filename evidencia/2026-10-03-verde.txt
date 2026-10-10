@@ -1,0 +1,49 @@
+
+> permamuseum@0.1.0 test
+> node --test "test/*.test.js"
+
+✔ el kit instalado declara los cinco módulos del núcleo (1.7054ms)
+✔ el núcleo consumido coincide con la tabla de digest del kit (2.8032ms)
+✔ las copias presentes en los hosts coinciden byte a byte (1.2774ms)
+✔ los módulos instalados declaran el mismo commit (1.2625ms)
+✔ el recorrido real obtiene aceptaciones verificables y conserva el rechazo (88.7195ms)
+✔ 01 museo sin verificar no publica (1.6484ms)
+✔ 02 declarante y verificador no pueden ser la misma parte (0.1666ms)
+✔ 03 evidencia vacía no se revisa (0.1179ms)
+✔ 04 referencias repetidas no son fuentes independientes (0.1375ms)
+✔ 05 procedencias incompatibles de una obra chocan (0.1397ms)
+✔ 06 regalía superior al techo autorizado se rechaza (0.0889ms)
+✔ 07 permiso vencido no autoriza uso (0.1978ms)
+✔ 08 permiso revocado no autoriza uso posterior (0.0862ms)
+✔ 09 recibo repetido no reactiva operación revocada (0.1286ms)
+✔ 10 dos museos no reclaman procedencia exclusiva de la misma obra (0.1812ms)
+✔ 11 identidad de cobro duplicada no duplica regalía (0.1553ms)
+✔ 12 indicios documentados de saqueo bloquean la venta (0.2072ms)
+✔ 13 texto libre verificado no es dictamen estructurado (0.1297ms)
+✔ 14 administrador único no acredita verificación (0.1383ms)
+✔ 15 contradicción en evidencia deja la afirmación impugnada (0.0856ms)
+✔ 16 autoridad vencida bloquea publicación (0.2045ms)
+✔ 17 principal no escribe en espacio ajeno (0.106ms)
+✔ 18 permiso exige obra identificada y derechos declarados (0.0904ms)
+✔ 19 uso fuera del alcance concedido se rechaza (0.0972ms)
+✔ 20 un token no transfiere permiso sin cláusula expresa (0.0853ms)
+✔ 21 salto de custodia sin actor o evidencia queda incompleto (0.145ms)
+✔ 22 dictamen de evidencia anterior no verifica la versión actual (0.0797ms)
+✔ 23 ejecutor no verifica su propio efecto (0.1011ms)
+✔ 24 permiso revocado requiere nueva concesión para reactivarse (0.0897ms)
+✔ 25 rechazo identifica resolver y dato faltante (0.065ms)
+✔ CONTROL: un dictamen textual no publica sin recibo verificable del núcleo (1.1999ms)
+✔ CONTROL: permiso acotado válido cubre el uso pedido (0.1517ms)
+✔ CONTROL: dictamen válido tiene mandato, evidencia y verificador independiente (0.1016ms)
+✔ una afirmación textual o booleana no basta para marcar publicación verificada (1.9784ms)
+✔ un objeto de dictamen escrito en datos sin recibo del núcleo no verifica (0.2221ms)
+✔ la resolución de rutas rechaza ubicaciones fuera del repositorio (0.6963ms)
+✔ la salida escapa controles terminales y saltos de línea del nombre del museo (90.2874ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 207.4639

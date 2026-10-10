@@ -1,0 +1,26 @@
+
+> permamuseum@0.1.0 recorrido
+> node src/recorrido.js
+
+Permamuseum, recorrido local con datos sintéticos: Museo Nimbo de la Laguna Azul
+Sin red. Sin blockchain encendido. No se simula un anclaje externo.
+registrar-principal: aceptada; recibo de kernel, coverage=alcance-revisado, autoridad-separada, identificador local y espacio declarados; notCovered=external anchor, identidad institucional real, representación legal
+  motivo: regla satisfecha
+registrar-obra: aceptada; recibo de kernel, coverage=alcance-revisado, autoridad-separada, identificador y descripción ficticios; notCovered=external anchor, existencia física, autoría real
+  motivo: regla satisfecha
+declarar-custodia: aceptada; recibo de kernel, coverage=alcance-revisado, autoridad-separada, evento declarado y laguna explícita; notCovered=external anchor, historia anterior no documentada, hecho histórico independiente
+  motivo: regla satisfecha
+referenciar-evidencia: aceptada; recibo de kernel, coverage=alcance-revisado, autoridad-separada, identificadores y versiones de referencias; notCovered=external anchor, integridad de repositorios externos, contenido externo
+  motivo: regla satisfecha
+emitir-dictamen: aceptada; recibo de kernel, coverage=alcance-revisado, autoridad-separada, presencia de dos referencias ficticias, un evento de custodia declarado; notCovered=external anchor, autenticidad material, titularidad, valor jurídico de procedencia, integridad de archivos externos
+  motivo: dictamen atribuido y acotado
+conceder-permiso: aceptada; recibo de kernel, coverage=alcance-revisado, autoridad-separada, un uso nombrado, una obra identificada, vencimiento explícito; notCovered=external anchor, autoridad legal del concedente, usos distintos de los enumerados
+  motivo: permiso vigente y acotado al uso pedido
+decidir-publicacion: aceptada; recibo de kernel, coverage=alcance-revisado, autoridad-separada, decisión local de publicación acotada; notCovered=external anchor, publicación en internet, autenticidad, titularidad
+  motivo: dictamen estructurado y permiso dentro del alcance local
+publicar-sin-evidencia: rechazada (evidencia-vacia); recibo de kernel, coverage=rechazo por evidencia vacía; notCovered=external anchor, veracidad de afirmación no aportada
+  motivo: no hay evidencia identificable que revisar
+  resolver: adjuntar referencias de evidencia identificables
+Resultado: 7 aceptados, 1 rechazado(s).
+Rechazo pendiente: no hay evidencia identificable que revisar. adjuntar referencias de evidencia identificables
+No se afirma participación de un museo real, blockchain, mainnet, autenticidad ni titularidad. El 2 % es un parámetro de fantasía.

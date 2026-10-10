@@ -1,0 +1,17 @@
+{
+  "name": "permamuseum",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "description": "Recorrido local sintético de procedencia y permisos culturales; consume el kernel de Vespi sin modificarlo.",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "recorrido": "node src/recorrido.js",
+    "cli": "node src/cli.js"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^16.3.1"
+  }
+}

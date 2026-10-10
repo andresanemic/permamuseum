@@ -1,0 +1,22 @@
+# Borrador SEP-1. No publicar ni hospedar este archivo.
+# Activo experimental sin valor, solo para Stellar testnet.
+NETWORK_PASSPHRASE = "Test SDF Network ; September 2015"
+ACCOUNTS = ["<EMISOR_PERMA_TESTNET>"]
+VERSION = "2.0.0"
+
+[DOCUMENTATION]
+ORG_NAME = "Permamuseum"
+ORG_URL = "<DOMINIO_PENDIENTE>"
+ORG_DESCRIPTION = "Activo experimental PERMA para una prueba técnica en testnet."
+ORG_OFFICIAL_EMAIL = "<CONTACTO_PENDIENTE>"
+
+[[CURRENCIES]]
+code = "PERMA"
+issuer = "<EMISOR_PERMA_TESTNET>"
+name = "PERMA testnet"
+desc = "Activo experimental sin precio, venta, liquidez ni promesa de valor."
+conditions = "Prueba técnica en Stellar testnet. No representa derechos sobre obras ni concede permisos culturales."
+display_decimals = 7
+fixed_number = 100000000
+is_asset_anchored = false
+status = "test"

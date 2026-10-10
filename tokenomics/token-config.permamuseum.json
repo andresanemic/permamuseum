@@ -1,0 +1,38 @@
+{
+  "red": "testnet",
+  "code": "PERMA",
+  "issuer": "issuer",
+  "supplyModel": "fixed",
+  "totalStroops": "1000000000000000",
+  "parametrosExperimentalesTestnet": true,
+  "flags": {
+    "authRequired": false,
+    "authRevocable": false,
+    "authImmutable": false,
+    "clawbackEnabled": false
+  },
+  "vesting": {
+    "inicio": "2026-10-03T00:00:00.000Z",
+    "cliffMeses": 12,
+    "tramos": 36,
+    "respaldoDias": 180,
+    "demoMinutos": 4,
+    "demoDesde": "reservaLiquidez"
+  },
+  "buckets": {
+    "distribuidora": { "porcentaje": 0, "cuenta": "distribuidora" },
+    "tesoreria": { "porcentaje": 20, "cuenta": "tesoreria" },
+    "comunidadCultural": { "porcentaje": 40, "cuenta": "comunidadCultural" },
+    "reservaLiquidez": { "porcentaje": 10, "cuenta": "reservaLiquidez", "sinPoolNiOfertas": true },
+    "contingencia": { "porcentaje": 5, "cuenta": "contingencia" },
+    "asesores": { "porcentaje": 10, "cuenta": "asesores" },
+    "fundador": { "porcentaje": 15, "fundadores": { "andres": 100 } }
+  },
+  "limitesCorridaTestnet": {
+    "cuentasNuevas": 9,
+    "ofertaTotal": "1000000000000000",
+    "transaccionesFriendbot": 9,
+    "sinFondosReales": true
+  },
+  "nota": "Porcentajes y techos son parámetros de esta corrida en testnet. Cualquier otro valor requiere decisión de Andrés antes de cualquier uso fuera de testnet. Sin precio, venta ni liquidez; la reserva no crea pool ni ofertas."
+}

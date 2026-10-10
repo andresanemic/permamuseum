@@ -2,7 +2,7 @@
 
 ## English
 
-This page summarizes dated project records: the suite captured 2026-10-09 and published here as docs/suite-2026-10-09.txt, which includes a local walkthrough using synthetic data and no network, and a separate PERMA issuance on Stellar testnet. The public repository does not contain the source code, test files, or verifier code. Read the local results as the project’s captured report, not as a test run a reader can reproduce from this repository; the testnet hashes can be checked individually through Horizon as described below.
+This page summarizes dated project records: the suite captured 2026-10-09 and published here as docs/suite-2026-10-09.txt, which includes a local walkthrough using synthetic data and no network, and a separate PERMA issuance on Stellar testnet. The public repository contains the source code, test files, and read-only verifier code (`scripts/token-verify.mjs`) under the review-only license. Read the local results as the project’s captured report; the suite can be rerun from this repository with `npm test`, and the testnet hashes can be checked individually through Horizon as described below.
 
 ### What was recorded
 
@@ -24,7 +24,7 @@ The later mutation sweep changed six rules one at a time: claimant and reviewer 
 
 ### Kernel identity and the digest check
 
-The project pins the consumed Vespi kernel to **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copied into the private project as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture on 2026-10-03 was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. The suite reports four kernel-provenance checks:
+The project pins the consumed Vespi kernel to **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copied into this repository as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture on 2026-10-03 was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. The suite reports four kernel-provenance checks:
 
 - the vendored kit declares every module in its SOURCE.md;
 - the consumed kernel matches the kit's digest table;
@@ -39,7 +39,7 @@ The reported run states that it had no network, did not turn on a blockchain, an
 
 The four local security checks address a bounded set of code paths. They report that paths outside the repository and symbolic-link paths were rejected, that a text or boolean verification and an unreceipted opinion were insufficient, and that terminal control characters were escaped. The review also names unresolved limits: input size is not bounded, all input fields do not have an exhaustive schema, and concurrent hostile filesystem changes are outside its protection. It did not review a network service, marketplace, wallet, or token integration. The report expressly says it is not an independent security audit.
 
-Because this public repository contains documentation only, running a test command here cannot reproduce the captured suite. When source code is opened for review, the suite must report 52 tests with 52 passing and 0 skipped on Node v24.15.0 against the vendored kernel 0.1.5; docs/suite-2026-10-09.txt is the reference capture for command, Node version, totals, and individual test names. The project's publication terms are in [Code not included](../CODE_NOT_INCLUDED.md) and [LICENSE](../LICENSE).
+The source code is in this repository under the review-only license (reading and cloning for evaluation; no modification or redistribution). Run `npm test` on Node 24 from the project root; the suite must report 52 tests with 52 passing and 0 skipped on Node v24.15.0 against the vendored kernel 0.1.5; docs/suite-2026-10-09.txt is the reference capture for command, Node version, totals, and individual test names. The project's publication terms are in [LICENSE](../LICENSE).
 
 ### PERMA testnet transaction evidence
 
@@ -125,11 +125,11 @@ The manifest records this attempted claim as unsuccessful, consistent with the r
 
 #### How to recheck
 
-Open each Horizon link to inspect its transaction result, operations, ledger, and time. Compare the ledgered transaction hashes and the resulting asset/account state with the testnet record. Horizon confirms testnet records, not cultural rights, legal authority, marketplace activity, payment for an artwork, royalty entitlement, demand, or value. The public repository does not include the read-only verifier code or secret keys, and no independent network check was performed while preparing this page.
+Open each Horizon link to inspect its transaction result, operations, ledger, and time. Compare the ledgered transaction hashes and the resulting asset/account state with the testnet record. Horizon confirms testnet records, not cultural rights, legal authority, marketplace activity, payment for an artwork, royalty entitlement, demand, or value. The read-only verifier code is in this repository (`scripts/token-verify.mjs`); secret keys are not, and no independent network check was performed while preparing this page.
 
 ## Español
 
-Esta página resume registros fechados del proyecto: la suite capturada el 2026-10-09 y publicada aquí como docs/suite-2026-10-09.txt, que incluye un recorrido local con datos sintéticos y sin red, y una emisión separada de PERMA en Stellar testnet. El repositorio público no contiene código fuente, archivos de pruebas ni el código del verificador. Lee los resultados locales como un informe capturado por el proyecto, no como una corrida que se pueda reproducir desde este repositorio; puedes comprobar cada hash de testnet mediante Horizon, como se indica abajo.
+Esta página resume registros fechados del proyecto: la suite capturada el 2026-10-09 y publicada aquí como docs/suite-2026-10-09.txt, que incluye un recorrido local con datos sintéticos y sin red, y una emisión separada de PERMA en Stellar testnet. El repositorio público contiene el código fuente, los archivos de pruebas y el código del verificador de solo lectura (`scripts/token-verify.mjs`) bajo la licencia de solo revisión. Lee los resultados locales como un informe capturado por el proyecto; la suite se puede repetir desde este repositorio con `npm test`, y puedes comprobar cada hash de testnet mediante Horizon, como se indica abajo.
 
 ### Qué se registró
 
@@ -151,14 +151,14 @@ El barrido posterior cambió seis reglas de una en una: independencia entre decl
 
 ### Identidad del kernel y comprobación por digest
 
-El proyecto fija el kernel de Vespi consumido a **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copiado dentro del proyecto privado como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura del 2026-10-03 estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. La suite informa cuatro comprobaciones de procedencia del kernel:
+El proyecto fija el kernel de Vespi consumido a **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copiado dentro de este repositorio como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura del 2026-10-03 estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. La suite informa cuatro comprobaciones de procedencia del kernel:
 
 - el kit vendorizado declara todos los módulos de su SOURCE.md;
 - el kernel consumido coincide con la tabla de digest del kit;
 - la copia vendorizada no tiene módulos sin declarar ni huecos;
 - los módulos vendorizados declaran el mismo commit.
 
-Un digest es una huella técnica de los archivos comparados. Al coincidir, ayuda a responder: «¿Qué copia del kernel consumió esta corrida?». No responde: «¿Es verdadera la afirmación cultural?». No autentica a una persona, un documento, un mandato, una obra, la propiedad ni la autoridad jurídica. El recorrido local usó recibos reales del kernel y el informe dice que pasaron las comprobaciones de integridad, sin modificar la copia vendorizada. La captura publicada no incluye código ni valores de digest, por lo que este repositorio no permite repetir la comparación de forma independiente.
+Un digest es una huella técnica de los archivos comparados. Al coincidir, ayuda a responder: «¿Qué copia del kernel consumió esta corrida?». No responde: «¿Es verdadera la afirmación cultural?». No autentica a una persona, un documento, un mandato, una obra, la propiedad ni la autoridad jurídica. El recorrido local usó recibos reales del kernel y el informe dice que pasaron las comprobaciones de integridad, sin modificar la copia vendorizada. La captura publicada no incluye valores de digest, pero el código y la copia vendorizada del kernel están en este repositorio, de modo que la comparación se puede repetir con `npm test`.
 
 ### Qué se puede comprobar aquí y qué no
 
@@ -166,7 +166,7 @@ El informe de la corrida dice que no hubo red, blockchain activa ni anclaje exte
 
 Las cuatro comprobaciones locales de seguridad cubren un conjunto acotado de rutas de código. Informan que se rechazaron rutas fuera del repositorio y rutas con enlaces simbólicos, que no bastó una verificación textual o booleana ni un dictamen sin recibo, y que se escaparon caracteres de control en la terminal. La revisión también nombra límites sin resolver: no se fija un tamaño máximo para la entrada, no hay un esquema exhaustivo de todos sus campos y la protección no cubre cambios hostiles concurrentes del sistema de archivos. No se revisó un servicio de red, marketplace, wallet ni integración de token. El propio informe aclara que no es una auditoría de seguridad independiente.
 
-Como este repositorio público solo contiene documentación, ejecutar aquí un comando de pruebas no reproduciría la suite capturada. Cuando se abra el código para revisión, la suite debe informar 52 pruebas con 52 aprobadas y 0 omitidas en Node v24.15.0 con el kernel vendorizado 0.1.5; docs/suite-2026-10-09.txt es la captura de referencia del comando, la versión de Node, los totales y los nombres de cada prueba. Las condiciones de publicación están en [Código no incluido](../CODE_NOT_INCLUDED.md) y [LICENSE](../LICENSE).
+El código fuente está en este repositorio bajo la licencia de solo revisión (permite leer y clonar para evaluar, no modificar ni redistribuir). Ejecuta `npm test` con Node 24 desde la raíz del proyecto; la suite debe informar 52 pruebas con 52 aprobadas y 0 omitidas en Node v24.15.0 con el kernel vendorizado 0.1.5; docs/suite-2026-10-09.txt es la captura de referencia del comando, la versión de Node, los totales y los nombres de cada prueba. Las condiciones de publicación están en [LICENSE](../LICENSE).
 
 ### Evidencia de transacciones de PERMA en testnet
 
@@ -252,4 +252,4 @@ El manifiesto registra este intento de reclamo como fallido, de acuerdo con el r
 
 #### Cómo volver a comprobar
 
-Abre cada enlace de Horizon para revisar el resultado, las operaciones, el ledger y la hora de la transacción. Compara los hashes asentados en ledger y el estado resultante del activo y de las cuentas con el registro de testnet. Horizon confirma registros en testnet, no derechos culturales, autoridad jurídica, actividad de un marketplace, pagos por una obra, derecho a regalías, demanda ni valor. El repositorio público no incluye el código del verificador de solo lectura ni las claves secretas, y al preparar esta página no se hizo una comprobación independiente en la red.
+Abre cada enlace de Horizon para revisar el resultado, las operaciones, el ledger y la hora de la transacción. Compara los hashes asentados en ledger y el estado resultante del activo y de las cuentas con el registro de testnet. Horizon confirma registros en testnet, no derechos culturales, autoridad jurídica, actividad de un marketplace, pagos por una obra, derecho a regalías, demanda ni valor. El código del verificador de solo lectura está en este repositorio (`scripts/token-verify.mjs`); las claves secretas no, y al preparar esta página no se hizo una comprobación independiente en la red.

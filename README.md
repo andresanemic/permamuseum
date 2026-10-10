@@ -17,7 +17,7 @@
 Each decision has a clear authority, and a limited assessment never passes for certainty. Evidence: 52/52 tests. Fictional institution, artwork and people.</p>
 
 <p align="center"><b>We’re applying to the Find Your Way hackathon and plan to participate in Meridian.</b></p>
-<p align="center"><b>For judges:</b> <a href="./docs/HOW_IT_WORKS.md">How it works</a> · <a href="./docs/EVIDENCE.md">Evidence</a> · <a href="./docs/LEGAL_AND_LIMITS.md">Limits</a> · <a href="./CODE_NOT_INCLUDED.md">Source and review terms</a>.<br>This public snapshot contains documentation and evidence, not runnable source.</p>
+<p align="center"><b>For judges:</b> <a href="./docs/HOW_IT_WORKS.md">How it works</a> · <a href="./docs/EVIDENCE.md">Evidence</a> · <a href="./docs/LEGAL_AND_LIMITS.md">Limits</a> · <a href="./LICENSE">Review-only license</a>.<br>The source is in this repository: run <code>npm test</code> on Node 24.</p>
 
 ---
 
@@ -109,11 +109,11 @@ Permamuseum is not a museum, collection, institutional pilot, provenance authori
 
 The captured suite records **52 tests, 52 passing, 0 not passing, 0 skipped** on Node v24.15.0. It covers the named project rules, three valid control cases, kernel provenance of the vendored 0.1.5 copy, receipt-backed publication, safe local paths, terminal output escaping, and the token plan and Horizon utilities. The 2026-10-03 capture was red because the project was pinned to an older kernel cut (0.1.3); the current capture ran in a clean clone with the kernel pinned to 0.1.5. The earlier adversarial RED run records 25 cases that did not pass for their expected reasons before implementation, with three valid controls already passing. A separate mutation sweep detected six isolated rule changes. The local security review reports four security checks passing after corrections and is explicitly not an independent audit. These are results from dated project records, summarized here; the reference capture is docs/suite-2026-10-09.txt.
 
-The kernel-provenance checks compare the vendored kernel copy in the private project (vendor/vespi-kernel) with its SOURCE.md digest table, module by module and commit by commit, and confirm the installed modules declare the same commit. A digest is a technical fingerprint of the reviewed copy. It helps identify which kernel copy the local receipt depended on; it cannot establish cultural truth, legal authority, or the quality of outside evidence. The walkthrough used real kernel receipts, but this documentation-only repository cannot rerun the suite or verify those receipts from source.
+The kernel-provenance checks compare the vendored kernel copy in this repository (vendor/vespi-kernel) with its SOURCE.md digest table, module by module and commit by commit, and confirm the installed modules declare the same commit. A digest is a technical fingerprint of the reviewed copy. It helps identify which kernel copy the local receipt depended on; it cannot establish cultural truth, legal authority, or the quality of outside evidence. The walkthrough used real kernel receipts, but this documentation-only repository cannot rerun the suite or verify those receipts from source.
 
 ## How Permamuseum relates to Vespi and Lore Plugin
 
-The recorded local walkthrough consumes Vespi kernel receipts and checks their integrity. The project pins the consumed kernel to **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copied into the private project as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. Lore Plugin supplies the project's written criteria and routing context. This relationship does not make either kernel receipts or project criteria evidence of an object's history. The checks recorded here cover the consumed kernel copy, not a live museum workflow. Visit [Vespi](https://github.com/andresanemic/vespi) and [Lore Plugin](https://github.com/andresanemic/lore-plugin) to see those projects.
+The recorded local walkthrough consumes Vespi kernel receipts and checks their integrity. The project pins the consumed kernel to **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copied into this repository as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. Lore Plugin supplies the project's written criteria and routing context. This relationship does not make either kernel receipts or project criteria evidence of an object's history. The checks recorded here cover the consumed kernel copy, not a live museum workflow. Visit [Vespi](https://github.com/andresanemic/vespi) and [Lore Plugin](https://github.com/andresanemic/lore-plugin) to see those projects.
 
 **What this relationship means.** The project was built with Lore Plugin's method (its agreement and criterion live in the project, in `acuerdo.md` and `lore/`), and its operations, authority and receipts run on the Vespi kernel 0.1.5, in the pinned copy that Lore Plugin 2.5.1 distributes (`skills/vespi/core/kernel`). That copy sits in the project as `vendor/vespi-kernel` and the suite verifies it against its `SOURCE.md`. Lore Plugin does not run inside the project. This project does not use the kernel's newer capabilities (Stellar pubnet anchors, live x402 settlement, the ZK verifier, emergency access); it exercises the core of operations, authority and receipts.
 
@@ -127,7 +127,7 @@ No real institution, claimant, reviewer, rights holder, permission, work, or evi
 
 ## How to review the project
 
-Start with [How it works](./docs/HOW_IT_WORKS.md) for the model and synthetic case. Then compare the test names and recorded results in [Evidence](./docs/EVIDENCE.md). Read [Legal and limits](./docs/LEGAL_AND_LIMITS.md) before interpreting “verified” or any permission. [Code not included](./CODE_NOT_INCLUDED.md) explains what this repository contains; the [review-only license](./LICENSE) sets its review terms. PERMA’s conditional study is in [Economy and token study](./docs/TOKEN.md).
+Start with [How it works](./docs/HOW_IT_WORKS.md) for the model and synthetic case. Then compare the test names and recorded results in [Evidence](./docs/EVIDENCE.md). Read [Legal and limits](./docs/LEGAL_AND_LIMITS.md) before interpreting “verified” or any permission. The source is in this repository; the [review-only license](./LICENSE) sets its review terms. PERMA’s conditional study is in [Economy and token study](./docs/TOKEN.md).
 
 ## Author
 
@@ -137,7 +137,7 @@ Start with [How it works](./docs/HOW_IT_WORKS.md) for the model and synthetic ca
 
 ---
 
-[How it works](./docs/HOW_IT_WORKS.md) · [Evidence](./docs/EVIDENCE.md) · [Economy and token study](./docs/TOKEN.md) · [Legal and limits](./docs/LEGAL_AND_LIMITS.md) · [Code not included](./CODE_NOT_INCLUDED.md) · [Review-only license](./LICENSE) · [Vespi](https://github.com/andresanemic/vespi) · [Lore Plugin](https://github.com/andresanemic/lore-plugin)
+[How it works](./docs/HOW_IT_WORKS.md) · [Evidence](./docs/EVIDENCE.md) · [Economy and token study](./docs/TOKEN.md) · [Legal and limits](./docs/LEGAL_AND_LIMITS.md) · [Review-only license](./LICENSE) · [Vespi](https://github.com/andresanemic/vespi) · [Lore Plugin](https://github.com/andresanemic/lore-plugin)
 
 </details>
 
@@ -166,7 +166,7 @@ Abre el registro de pruebas. Consulta [Evidencia](./docs/EVIDENCE.md).
 
 Lee los límites jurídicos y de verificación. Consulta [Marco legal y límites](./docs/LEGAL_AND_LIMITS.md).
 
-Revisa las condiciones de publicación. Consulta [Código no incluido](./CODE_NOT_INCLUDED.md) y la [licencia de solo revisión](./LICENSE).
+Lee los términos en la [licencia de solo revisión](./LICENSE) y ejecuta `npm test` (Node 24).
 
 ## En un minuto
 
@@ -239,11 +239,11 @@ Permamuseum no es un museo, una colección, un piloto institucional, una autorid
 
 La suite capturada registra **52 pruebas, 52 aprobadas, 0 fallidas y 0 omitidas** en Node v24.15.0. Cubre las reglas del proyecto con nombre, tres controles válidos, procedencia de la copia vendorizada del kernel 0.1.5, publicación respaldada por recibo, rutas locales seguras, escape de caracteres de control en terminal y el plan del token con las utilidades de Horizon. La captura del 2026-10-03 estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); la captura actual se repitió en un clon limpio con el kernel fijado a 0.1.5. La fase adversarial RED anterior registra 25 casos que no aprobaron por el motivo previsto antes de implementar, con tres controles válidos ya aprobados. Un barrido separado detectó seis cambios aislados de reglas. La revisión local de seguridad informa cuatro comprobaciones aprobadas después de las correcciones y declara que no es una auditoría independiente. Son resultados de registros fechados del proyecto, resumidos aquí; la captura de referencia es docs/suite-2026-10-09.txt.
 
-Las comprobaciones de procedencia comparan la copia vendorizada del kernel en el proyecto privado (vendor/vespi-kernel) con su tabla de digest del SOURCE.md, módulo por módulo y commit por commit, y confirman que los módulos vendorizados declaran el mismo commit. Un digest es una huella técnica de la copia revisada. Ayuda a identificar de qué copia del kernel dependió el recibo local; no establece verdad cultural, autoridad jurídica ni calidad de evidencia externa. El recorrido usó recibos reales del kernel, pero este repositorio documental no puede volver a ejecutar la suite ni verificar esos recibos desde el código.
+Las comprobaciones de procedencia comparan la copia vendorizada del kernel en este repositorio (vendor/vespi-kernel) con su tabla de digest del SOURCE.md, módulo por módulo y commit por commit, y confirman que los módulos vendorizados declaran el mismo commit. Un digest es una huella técnica de la copia revisada. Ayuda a identificar de qué copia del kernel dependió el recibo local; no establece verdad cultural, autoridad jurídica ni calidad de evidencia externa. El recorrido usó recibos reales del kernel, pero este repositorio documental no puede volver a ejecutar la suite ni verificar esos recibos desde el código.
 
 ## Relación de Permamuseum con Vespi y Lore Plugin
 
-El recorrido local registrado consume recibos del kernel de Vespi y comprueba su integridad. El proyecto fija el kernel consumido a **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copiado dentro del proyecto privado como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura anterior estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. Lore Plugin aporta los criterios escritos del proyecto y el contexto de enrutamiento. Esta relación no convierte los recibos del kernel ni los criterios del proyecto en evidencia de la historia de una obra. Las comprobaciones aquí registradas cubren la copia consumida del kernel, no un flujo de trabajo activo en un museo. Puedes conocer esos proyectos en [Vespi](https://github.com/andresanemic/vespi) y [Lore Plugin](https://github.com/andresanemic/lore-plugin).
+El recorrido local registrado consume recibos del kernel de Vespi y comprueba su integridad. El proyecto fija el kernel consumido a **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copiado dentro de este repositorio como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura anterior estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. Lore Plugin aporta los criterios escritos del proyecto y el contexto de enrutamiento. Esta relación no convierte los recibos del kernel ni los criterios del proyecto en evidencia de la historia de una obra. Las comprobaciones aquí registradas cubren la copia consumida del kernel, no un flujo de trabajo activo en un museo. Puedes conocer esos proyectos en [Vespi](https://github.com/andresanemic/vespi) y [Lore Plugin](https://github.com/andresanemic/lore-plugin).
 
 **Qué significa esta relación.** El proyecto se construyó con el método de Lore Plugin (su acuerdo y su criterio viven en el proyecto, en `acuerdo.md` y `lore/`), y sus operaciones, autoridad y recibos corren sobre el kernel de Vespi 0.1.5, en la copia fijada que distribuye Lore Plugin 2.5.1 (`skills/vespi/core/kernel`). Esa copia está en el proyecto como `vendor/vespi-kernel` y la suite la verifica contra su `SOURCE.md`. Lore Plugin no corre dentro del proyecto. Este proyecto no usa las capacidades nuevas del kernel (anclas Stellar pubnet, liquidación x402 en vivo, el verificador ZK, el acceso de emergencia); ejerce el núcleo de operaciones, autoridad y recibos.
 
@@ -257,7 +257,7 @@ En el recorrido local no participaron instituciones, declarantes, revisores, tit
 
 ## Cómo revisar el proyecto
 
-Empieza por [Cómo funciona](./docs/HOW_IT_WORKS.md) para conocer el modelo y el caso sintético. Luego compara los nombres de pruebas y resultados registrados en [Evidencia](./docs/EVIDENCE.md). Lee [Marco legal y límites](./docs/LEGAL_AND_LIMITS.md) antes de interpretar «verificado» o cualquier permiso. [Código no incluido](./CODE_NOT_INCLUDED.md) explica qué contiene este repositorio; la [licencia de solo revisión](./LICENSE) fija sus condiciones. El estudio condicional de PERMA está en [Estudio de economía y token](./docs/TOKEN.md).
+Empieza por [Cómo funciona](./docs/HOW_IT_WORKS.md) para conocer el modelo y el caso sintético. Luego compara los nombres de pruebas y resultados registrados en [Evidencia](./docs/EVIDENCE.md). Lee [Marco legal y límites](./docs/LEGAL_AND_LIMITS.md) antes de interpretar «verificado» o cualquier permiso. El código está en este repositorio; la [licencia de solo revisión](./LICENSE) fija sus condiciones. El estudio condicional de PERMA está en [Estudio de economía y token](./docs/TOKEN.md).
 
 ## Autor
 
@@ -267,6 +267,6 @@ Empieza por [Cómo funciona](./docs/HOW_IT_WORKS.md) para conocer el modelo y el
 
 ---
 
-[Cómo funciona](./docs/HOW_IT_WORKS.md) · [Evidencia](./docs/EVIDENCE.md) · [Estudio de economía y token](./docs/TOKEN.md) · [Marco legal y límites](./docs/LEGAL_AND_LIMITS.md) · [Código no incluido](./CODE_NOT_INCLUDED.md) · [Licencia de solo revisión](./LICENSE) · [Vespi](https://github.com/andresanemic/vespi) · [Lore Plugin](https://github.com/andresanemic/lore-plugin)
+[Cómo funciona](./docs/HOW_IT_WORKS.md) · [Evidencia](./docs/EVIDENCE.md) · [Estudio de economía y token](./docs/TOKEN.md) · [Marco legal y límites](./docs/LEGAL_AND_LIMITS.md) · [Licencia de solo revisión](./LICENSE) · [Vespi](https://github.com/andresanemic/vespi) · [Lore Plugin](https://github.com/andresanemic/lore-plugin)
 
 </details>

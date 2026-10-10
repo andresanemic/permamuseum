@@ -1,0 +1,229 @@
+
+> permamuseum@0.1.0 test
+> node --test "test/*.test.js"
+
+✔ el kit instalado declara los cinco módulos del núcleo (3.6957ms)
+✔ el núcleo consumido coincide con la tabla de digest del kit (81.7791ms)
+✔ las copias presentes en los hosts coinciden byte a byte (1.8454ms)
+✔ los módulos instalados declaran el mismo commit (1.9167ms)
+✔ el recorrido real obtiene aceptaciones verificables y conserva el rechazo (150.7894ms)
+✔ 01 museo sin verificar no publica (2.0196ms)
+✔ 02 declarante y verificador no pueden ser la misma parte (0.1887ms)
+✔ 03 evidencia vacía no se revisa (0.1727ms)
+✔ 04 referencias repetidas no son fuentes independientes (0.235ms)
+✔ 05 procedencias incompatibles de una obra chocan (0.1783ms)
+✔ 06 regalía superior al techo autorizado se rechaza (0.1262ms)
+✔ 07 permiso vencido no autoriza uso (1.5253ms)
+✔ 08 permiso revocado no autoriza uso posterior (0.1325ms)
+✔ 09 recibo repetido no reactiva operación revocada (0.2001ms)
+✔ 10 dos museos no reclaman procedencia exclusiva de la misma obra (0.2691ms)
+✔ 11 identidad de cobro duplicada no duplica regalía (0.1409ms)
+✔ 12 indicios documentados de saqueo bloquean la venta (0.2581ms)
+✔ 13 texto libre verificado no es dictamen estructurado (0.12ms)
+✔ 14 administrador único no acredita verificación (0.1355ms)
+✔ 15 contradicción en evidencia deja la afirmación impugnada (0.0761ms)
+✔ 16 autoridad vencida bloquea publicación (0.1006ms)
+✔ 17 principal no escribe en espacio ajeno (0.1617ms)
+✔ 18 permiso exige obra identificada y derechos declarados (0.1972ms)
+✔ 19 uso fuera del alcance concedido se rechaza (0.1109ms)
+✔ 20 un token no transfiere permiso sin cláusula expresa (0.1416ms)
+✔ 21 salto de custodia sin actor o evidencia queda incompleto (0.2245ms)
+✔ 22 dictamen de evidencia anterior no verifica la versión actual (0.133ms)
+✔ 23 ejecutor no verifica su propio efecto (0.1524ms)
+✔ 24 permiso revocado requiere nueva concesión para reactivarse (0.0806ms)
+✔ 25 rechazo identifica resolver y dato faltante (0.0685ms)
+✔ CONTROL: un dictamen textual no publica sin recibo verificable del núcleo (20.8748ms)
+✔ CONTROL: permiso acotado válido cubre el uso pedido (0.2385ms)
+✔ CONTROL: dictamen válido tiene mandato, evidencia y verificador independiente (0.1459ms)
+✔ una afirmación textual o booleana no basta para marcar publicación verificada (31.3266ms)
+✔ un objeto de dictamen escrito en datos sin recibo del núcleo no verifica (0.3062ms)
+✔ la resolución de rutas rechaza ubicaciones fuera del repositorio (1.3536ms)
+✔ la salida escapa controles terminales y saltos de línea del nombre del museo (117.6414ms)
+✖ la configuración fija 100 millones y distribuye las seis cubetas autorizadas (3.7649ms)
+✖ la configuración rechaza cambios de oferta, segunda emisión, venta, mainnet y banderas (0.4258ms)
+✖ el plan crea una sola emisión por oferta exacta y termina bloqueando la emisora (0.3579ms)
+✖ el plan reserva liquidez sin pool y usa cubeta de comunidad cultural (0.3719ms)
+✖ fundador único Andrés recibe 36 balances, con cliff de 12 meses y respaldo de tesorería a 180 días (0.7126ms)
+✖ la demo de vesting rechaza reclamo temprano y permite el reclamo al desbloquear (0.2505ms)
+✖ ninguna operación ofrece precio, pool ni venta de PERMA (0.3414ms)
+✖ el verificador confirma oferta constante, banderas apagadas, emisor bloqueado y un solo fundador (0.2718ms)
+✖ los utilitarios leen resultados Horizon y no aceptan datos mal formados (0.293ms)
+ℹ tests 46
+ℹ suites 0
+ℹ pass 37
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 399.0562
+
+✖ failing tests:
+
+test at test\token.test.js:19:1
+✖ la configuración fija 100 millones y distribuye las seis cubetas autorizadas (3.7649ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:20:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:32:1
+✖ la configuración rechaza cambios de oferta, segunda emisión, venta, mainnet y banderas (0.4258ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:33:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:48:1
+✖ el plan crea una sola emisión por oferta exacta y termina bloqueando la emisora (0.3579ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:49:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:60:1
+✖ el plan reserva liquidez sin pool y usa cubeta de comunidad cultural (0.3719ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:61:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:69:1
+✖ fundador único Andrés recibe 36 balances, con cliff de 12 meses y respaldo de tesorería a 180 días (0.7126ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:70:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:81:1
+✖ la demo de vesting rechaza reclamo temprano y permite el reclamo al desbloquear (0.2505ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:82:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:91:1
+✖ ninguna operación ofrece precio, pool ni venta de PERMA (0.3414ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:92:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:98:1
+✖ el verificador confirma oferta constante, banderas apagadas, emisor bloqueado y un solo fundador (0.2718ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:99:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\token.test.js:104:1
+✖ los utilitarios leen resultados Horizon y no aceptan datos mal formados (0.293ms)
+  AssertionError [ERR_ASSERTION]: src/token.js debe implementar las reglas de PERMA
+      at exigirImplementacion (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:15:10)
+      at TestContext.<anonymous> (C:\Claude\founder\proyectos\permamuseum\test\token.test.js:105:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

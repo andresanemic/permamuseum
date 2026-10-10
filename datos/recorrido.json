@@ -1,0 +1,42 @@
+{
+  "museo": {
+    "id": "principal-museo-nimbo",
+    "nombre": "Museo Nimbo de la Laguna Azul",
+    "espacio": "espacio-museo-nimbo",
+    "declarante": "custodio-institucional-fic",
+    "verificador": "revisor-archivo-fic"
+  },
+  "obra": {
+    "id": "obra-fic-001",
+    "titulo": "Vasija de las nubes quietas",
+    "autor": "Taller Nube de Tiza",
+    "identidad": "objeto-ceramico-de-fantasia-001"
+  },
+  "custodia": {
+    "eventos": [
+      { "entrega": "deposito-fic-001", "recibe": "museo-nimbo", "evidencia": "ref-fic-custodia-001", "en": "2025-04-10T12:00:00.000Z" }
+    ],
+    "lagunas": ["periodo anterior a 2025-04-10 no documentado"]
+  },
+  "evidencias": [
+    { "id": "ref-fic-custodia-001", "tipo": "referencia de archivo ficticia", "version": "v1" },
+    { "id": "ref-fic-obra-001", "tipo": "ficha descriptiva ficticia", "version": "v1" }
+  ],
+  "dictamen": {
+    "mandato": "revisar que las referencias identificadas existan en este expediente sintético",
+    "metodo": "comparación de referencias internas",
+    "cobertura": ["presencia de dos referencias ficticias", "un evento de custodia declarado"],
+    "notCovered": ["autenticidad material", "titularidad", "valor jurídico de procedencia", "integridad de archivos externos"]
+  },
+  "permiso": {
+    "obra": "obra-fic-001",
+    "derechosDeclarados": true,
+    "usosPermitidos": ["exhibición digital descriptiva"],
+    "usoSolicitado": "exhibición digital descriptiva",
+    "vence": "2026-11-03T00:00:00.000Z",
+    "regaliaFantasía": 2,
+    "techoFantasía": 2,
+    "nota": "2 % solo es un parámetro de fantasía, no una tarifa acordada"
+  },
+  "reloj": "2026-10-03T12:00:00.000Z"
+}

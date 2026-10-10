@@ -1,0 +1,27 @@
+Barrido manual de seis mutaciones aisladas sobre src/permamuseum.js.
+
+Mutación: independencia declarante/verificador
+Prueba focalizada: 02 declarante y verificador
+Resultado: DETECTADA; código=1
+
+Mutación: techo de regalía
+Prueba focalizada: 06 regalía superior
+Resultado: DETECTADA; código=1
+
+Mutación: vencimiento
+Prueba focalizada: 07 permiso vencido
+Resultado: DETECTADA; código=1
+
+Mutación: revocación
+Prueba focalizada: 08 permiso revocado
+Resultado: DETECTADA; código=1
+
+Mutación: alcance del uso
+Prueba focalizada: 19 uso fuera del alcance
+Resultado: DETECTADA; código=1
+
+Mutación: actor y evidencia de custodia
+Prueba focalizada: 21 salto de custodia
+Resultado: DETECTADA; código=1
+
+Código original restaurado al terminar el barrido.
