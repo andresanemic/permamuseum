@@ -24,7 +24,7 @@ The later mutation sweep changed six rules one at a time: claimant and reviewer 
 
 ### Kernel identity and the digest check
 
-The project pins the consumed Vespi kernel to **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copied into this repository as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture on 2026-10-03 was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. The suite reports four kernel-provenance checks:
+The project pins the consumed Vespi kernel to **0.1.6** (commit `95f2d614f4492056c8bb2cd951f08d1089027d4f`), copied into this repository as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture on 2026-10-03 was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. The suite reports four kernel-provenance checks:
 
 - the vendored kit declares every module in its SOURCE.md;
 - the consumed kernel matches the kit's digest table;
@@ -39,7 +39,7 @@ The reported run states that it had no network, did not turn on a blockchain, an
 
 The four local security checks address a bounded set of code paths. They report that paths outside the repository and symbolic-link paths were rejected, that a text or boolean verification and an unreceipted opinion were insufficient, and that terminal control characters were escaped. The review also names unresolved limits: input size is not bounded, all input fields do not have an exhaustive schema, and concurrent hostile filesystem changes are outside its protection. It did not review a network service, marketplace, wallet, or token integration. The report expressly says it is not an independent security audit.
 
-The source code is in this repository under the review-only license (reading and cloning for evaluation; no modification or redistribution). Run `npm test` on Node 24 from the project root; the suite must report 52 tests with 52 passing and 0 skipped on Node v24.15.0 against the vendored kernel 0.1.5; docs/suite-2026-10-09.txt is the reference capture for command, Node version, totals, and individual test names. The project's publication terms are in [LICENSE](../LICENSE).
+The source code is in this repository under the review-only license (reading and cloning for evaluation; no modification or redistribution). Run `npm test` on Node 24 from the project root; the suite must report 52 tests with 52 passing and 0 skipped on Node v24.15.0 against the vendored kernel 0.1.6; docs/suite-2026-10-09.txt is the reference capture for command, Node version, totals, and individual test names. The project's publication terms are in [LICENSE](../LICENSE).
 
 ### PERMA testnet transaction evidence
 
@@ -151,7 +151,7 @@ El barrido posterior cambió seis reglas de una en una: independencia entre decl
 
 ### Identidad del kernel y comprobación por digest
 
-El proyecto fija el kernel de Vespi consumido a **0.1.5** (commit `ed559e83c976dd6e6a379a5510db776206f670b4`), copiado dentro de este repositorio como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura del 2026-10-03 estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. La suite informa cuatro comprobaciones de procedencia del kernel:
+El proyecto fija el kernel de Vespi consumido a **0.1.6** (commit `95f2d614f4492056c8bb2cd951f08d1089027d4f`), copiado dentro de este repositorio como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura del 2026-10-03 estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. La suite informa cuatro comprobaciones de procedencia del kernel:
 
 - el kit vendorizado declara todos los módulos de su SOURCE.md;
 - el kernel consumido coincide con la tabla de digest del kit;
@@ -166,7 +166,7 @@ El informe de la corrida dice que no hubo red, blockchain activa ni anclaje exte
 
 Las cuatro comprobaciones locales de seguridad cubren un conjunto acotado de rutas de código. Informan que se rechazaron rutas fuera del repositorio y rutas con enlaces simbólicos, que no bastó una verificación textual o booleana ni un dictamen sin recibo, y que se escaparon caracteres de control en la terminal. La revisión también nombra límites sin resolver: no se fija un tamaño máximo para la entrada, no hay un esquema exhaustivo de todos sus campos y la protección no cubre cambios hostiles concurrentes del sistema de archivos. No se revisó un servicio de red, marketplace, wallet ni integración de token. El propio informe aclara que no es una auditoría de seguridad independiente.
 
-El código fuente está en este repositorio bajo la licencia de solo revisión (permite leer y clonar para evaluar, no modificar ni redistribuir). Ejecuta `npm test` con Node 24 desde la raíz del proyecto; la suite debe informar 52 pruebas con 52 aprobadas y 0 omitidas en Node v24.15.0 con el kernel vendorizado 0.1.5; docs/suite-2026-10-09.txt es la captura de referencia del comando, la versión de Node, los totales y los nombres de cada prueba. Las condiciones de publicación están en [LICENSE](../LICENSE).
+El código fuente está en este repositorio bajo la licencia de solo revisión (permite leer y clonar para evaluar, no modificar ni redistribuir). Ejecuta `npm test` con Node 24 desde la raíz del proyecto; la suite debe informar 52 pruebas con 52 aprobadas y 0 omitidas en Node v24.15.0 con el kernel vendorizado 0.1.6; docs/suite-2026-10-09.txt es la captura de referencia del comando, la versión de Node, los totales y los nombres de cada prueba. Las condiciones de publicación están en [LICENSE](../LICENSE).
 
 ### Evidencia de transacciones de PERMA en testnet
 
