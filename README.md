@@ -271,7 +271,7 @@ Empieza por [Cómo funciona](./docs/HOW_IT_WORKS.md) para conocer el modelo y el
 
 ## Autor
 
-**Andrés Peña Mellado**, Digital Art Director & Creative Developer que trabaja entre agentes de IA, Web3, diseño e investigación. Autoridad del repositorio: `andresanemic`.
+**Andrés Peña Mellado**, director de arte digital y creative developer que trabaja con agentes de IA, Web3, diseño e investigación. Autoridad del repositorio: `andresanemic`.
 
 [<img src="./assets/icons/v2/telegram.svg" width="28" alt="Telegram">](https://t.me/andresanemic) &nbsp;&nbsp; [<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/v2/x-dark.svg"><img src="./assets/icons/v2/x.svg" width="28" alt="X"></picture>](https://x.com/andresanemic) &nbsp;&nbsp; [<img src="./assets/icons/v2/linkedin.svg" width="28" alt="LinkedIn">](https://www.linkedin.com/in/andresanemic/)
 
