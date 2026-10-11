@@ -2,19 +2,19 @@
 
 ## English
 
-This page summarizes dated project records: the suite captured 2026-10-09 and published here as docs/suite-2026-10-09.txt, which includes a local walkthrough using synthetic data and no network, and a separate PERMA issuance on Stellar testnet. The public repository contains the source code, test files, and read-only verifier code (`scripts/token-verify.mjs`) under the review-only license. Read the local results as the project’s captured report; the suite can be rerun from this repository with `npm test`, and the testnet hashes can be checked individually through Horizon as described below.
+This page summarizes dated project records: the suite captured 2026-10-11 and published here as docs/suite-2026-10-11.txt, which includes a local walkthrough using synthetic data and no network, and a separate PERMA issuance on Stellar testnet. The public repository contains the source code, test files, and read-only verifier code (`scripts/token-verify.mjs`) under the review-only license. Read the local results as the project’s captured report; the suite can be rerun from this repository with `npm test`, and the testnet hashes can be checked individually through Horizon as described below.
 
 ### What was recorded
 
 | Record | What it covers | Reported result |
 | --- | --- | --- |
-| Suite (2026-10-09 capture) | Named behavior checks, controls, receipt validation, kernel provenance of the vendored copy, local path handling, terminal output, token plan, and Horizon utilities. | 52 tests, 52 passing, 0 skipped. |
+| Suite (2026-10-11 capture) | Named behavior checks, controls, receipt validation, kernel provenance of the vendored copy, local path handling, terminal output, token plan, and Horizon utilities. | 52 tests, 52 passing, 0 skipped. |
 | Adversarial RED phase | 25 cases written before implementation, with three valid controls. | All 25 adversarial cases came back RED for their expected reasons; the three controls passed. |
 | Local walkthrough | Synthetic principal, work, custody declaration, references, review, permission, publication decision, and empty-evidence rejection. | Seven accepted operations and one rejection for `evidencia-vacia`. |
 | Mutation sweep | Six isolated changes to rules with focused checks. | All six changes were detected; the original source was restored. |
 | Local security review | Output path containment, evidence-backed verification, terminal control characters, and stated limitations. | Four security checks reported passing after fixes. The review was local, not independent. |
 
-The GREEN suite contains the five kernel and walkthrough checks below, 25 adversarial rule checks, three valid controls, two further verification checks, two security checks, and fifteen further checks covering the fixed-supply token configuration, the allocation plan and its vesting demo, Horizon utilities and pagination, local key storage, and configuration handling. Its named cases include unverified publication, claimant and reviewer separation, empty and repeated evidence, conflicting custody claims, royalty ceilings, expiry and revocation, stale evidence, token permission boundaries, missing custody actors, reviewer conflicts, and actionable rejection output. The names and exact recorded totals are in the captured suite summary published here as docs/suite-2026-10-09.txt.
+The GREEN suite contains the five kernel and walkthrough checks below, 25 adversarial rule checks, three valid controls, two further verification checks, two security checks, and fifteen further checks covering the fixed-supply token configuration, the allocation plan and its vesting demo, Horizon utilities and pagination, local key storage, and configuration handling. Its named cases include unverified publication, claimant and reviewer separation, empty and repeated evidence, conflicting custody claims, royalty ceilings, expiry and revocation, stale evidence, token permission boundaries, missing custody actors, reviewer conflicts, and actionable rejection output. The names and exact recorded totals are in the captured suite summary published here as docs/suite-2026-10-11.txt.
 
 ### What the adversarial phase found
 
@@ -39,7 +39,7 @@ The reported run states that it had no network, did not turn on a blockchain, an
 
 The four local security checks address a bounded set of code paths. They report that paths outside the repository and symbolic-link paths were rejected, that a text or boolean verification and an unreceipted opinion were insufficient, and that terminal control characters were escaped. The review also names unresolved limits: input size is not bounded, all input fields do not have an exhaustive schema, and concurrent hostile filesystem changes are outside its protection. It did not review a network service, marketplace, wallet, or token integration. The report expressly says it is not an independent security audit.
 
-The source code is in this repository under the review-only license (reading and cloning for evaluation; no modification or redistribution). Run `npm test` on Node 24 from the project root; the suite must report 52 tests with 52 passing and 0 skipped on Node v24.15.0 against the vendored kernel 0.1.6; docs/suite-2026-10-09.txt is the reference capture for command, Node version, totals, and individual test names. The project's publication terms are in [LICENSE](../LICENSE).
+The source code is in this repository under the review-only license (reading and cloning for evaluation; no modification or redistribution). Run `npm test` on Node 24 from the project root; the suite must report 52 tests with 52 passing and 0 skipped on Node v24.15.0 against the vendored kernel 0.1.6; docs/suite-2026-10-11.txt is the reference capture for command, Node version, totals, and individual test names. The project's publication terms are in [LICENSE](../LICENSE).
 
 ### PERMA testnet transaction evidence
 
@@ -129,19 +129,19 @@ Open each Horizon link to inspect its transaction result, operations, ledger, an
 
 ## Español
 
-Esta página resume registros fechados del proyecto: la suite capturada el 2026-10-09 y publicada aquí como docs/suite-2026-10-09.txt, que incluye un recorrido local con datos sintéticos y sin red, y una emisión separada de PERMA en Stellar testnet. El repositorio público contiene el código fuente, los archivos de pruebas y el código del verificador de solo lectura (`scripts/token-verify.mjs`) bajo la licencia de solo revisión. Lee los resultados locales como un informe capturado por el proyecto; la suite se puede repetir desde este repositorio con `npm test`, y puedes comprobar cada hash de testnet mediante Horizon, como se indica abajo.
+Esta página resume registros fechados del proyecto: la suite capturada el 2026-10-11 y publicada aquí como docs/suite-2026-10-11.txt, que incluye un recorrido local con datos sintéticos y sin red, y una emisión separada de PERMA en Stellar testnet. El repositorio público contiene el código fuente, los archivos de pruebas y el código del verificador de solo lectura (`scripts/token-verify.mjs`) bajo la licencia de solo revisión. Lee los resultados locales como un informe capturado por el proyecto; la suite se puede repetir desde este repositorio con `npm test`, y puedes comprobar cada hash de testnet mediante Horizon, como se indica abajo.
 
 ### Qué se registró
 
 | Registro | Qué cubre | Resultado informado |
 | --- | --- | --- |
-| Suite (captura 2026-10-09) | Comprobaciones nombradas de comportamiento, controles, validación de recibos, procedencia de la copia vendorizada, rutas locales, salida de terminal, plan del token y utilidades de Horizon. | 52 pruebas, 52 aprobadas, 0 omitidas. |
+| Suite (captura 2026-10-11) | Comprobaciones nombradas de comportamiento, controles, validación de recibos, procedencia de la copia vendorizada, rutas locales, salida de terminal, plan del token y utilidades de Horizon. | 52 pruebas, 52 aprobadas, 0 omitidas. |
 | Fase adversarial RED | 25 casos escritos antes de implementar, con tres controles válidos. | Los 25 casos adversariales quedaron en rojo por los motivos previstos; los tres controles se aprobaron. |
 | Recorrido local | Principal, obra, declaración de custodia, referencias, dictamen, permiso, decisión de publicación y rechazo por evidencia vacía, todo sintético. | Siete operaciones aceptadas y un rechazo por `evidencia-vacia`. |
 | Barrido de mutaciones | Seis cambios aislados de reglas con comprobaciones focalizadas. | Se detectaron los seis cambios; se restauró el código original. |
 | Revisión local de seguridad | Contención de rutas, verificación respaldada por evidencia, controles de terminal y límites declarados. | Se informan cuatro comprobaciones de seguridad aprobadas tras las correcciones. La revisión fue local, no independiente. |
 
-La suite GREEN contiene las cinco comprobaciones del kernel y del recorrido que se describen abajo, 25 comprobaciones de reglas adversariales, tres controles válidos, dos comprobaciones adicionales de verificación, dos comprobaciones de seguridad y quince comprobaciones adicionales sobre la configuración del token de oferta fija, el plan de asignación y su demo de vesting, las utilidades de Horizon y la paginación, el almacenamiento local de llaves y el manejo de configuración. Entre los casos nombrados están publicación institucional sin revisión, separación entre declarante y persona revisora, evidencia vacía o repetida, procedencias incompatibles, topes de regalía, vencimiento y revocación, evidencia antigua, límites de permisos y tokens, actores faltantes en custodia, conflictos de revisión y rechazos sin salida accionable. Los nombres y totales exactos están en el resumen de suite capturado, publicado aquí como docs/suite-2026-10-09.txt.
+La suite GREEN contiene las cinco comprobaciones del kernel y del recorrido que se describen abajo, 25 comprobaciones de reglas adversariales, tres controles válidos, dos comprobaciones adicionales de verificación, dos comprobaciones de seguridad y quince comprobaciones adicionales sobre la configuración del token de oferta fija, el plan de asignación y su demo de vesting, las utilidades de Horizon y la paginación, el almacenamiento local de llaves y el manejo de configuración. Entre los casos nombrados están publicación institucional sin revisión, separación entre declarante y persona revisora, evidencia vacía o repetida, procedencias incompatibles, topes de regalía, vencimiento y revocación, evidencia antigua, límites de permisos y tokens, actores faltantes en custodia, conflictos de revisión y rechazos sin salida accionable. Los nombres y totales exactos están en el resumen de suite capturado, publicado aquí como docs/suite-2026-10-11.txt.
 
 ### Qué encontró la fase adversarial
 
@@ -166,7 +166,7 @@ El informe de la corrida dice que no hubo red, blockchain activa ni anclaje exte
 
 Las cuatro comprobaciones locales de seguridad cubren un conjunto acotado de rutas de código. Informan que se rechazaron rutas fuera del repositorio y rutas con enlaces simbólicos, que no bastó una verificación textual o booleana ni un dictamen sin recibo, y que se escaparon caracteres de control en la terminal. La revisión también nombra límites sin resolver: no se fija un tamaño máximo para la entrada, no hay un esquema exhaustivo de todos sus campos y la protección no cubre cambios hostiles concurrentes del sistema de archivos. No se revisó un servicio de red, marketplace, wallet ni integración de token. El propio informe aclara que no es una auditoría de seguridad independiente.
 
-El código fuente está en este repositorio bajo la licencia de solo revisión (permite leer y clonar para evaluar, no modificar ni redistribuir). Ejecuta `npm test` con Node 24 desde la raíz del proyecto; la suite debe informar 52 pruebas con 52 aprobadas y 0 omitidas en Node v24.15.0 con el kernel vendorizado 0.1.6; docs/suite-2026-10-09.txt es la captura de referencia del comando, la versión de Node, los totales y los nombres de cada prueba. Las condiciones de publicación están en [LICENSE](../LICENSE).
+El código fuente está en este repositorio bajo la licencia de solo revisión (permite leer y clonar para evaluar, no modificar ni redistribuir). Ejecuta `npm test` con Node 24 desde la raíz del proyecto; la suite debe informar 52 pruebas con 52 aprobadas y 0 omitidas en Node v24.15.0 con el kernel vendorizado 0.1.6; docs/suite-2026-10-11.txt es la captura de referencia del comando, la versión de Node, los totales y los nombres de cada prueba. Las condiciones de publicación están en [LICENSE](../LICENSE).
 
 ### Evidencia de transacciones de PERMA en testnet
 
