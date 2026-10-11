@@ -124,6 +124,9 @@ The RUC-D study concludes that a project currency is unnecessary for recording c
 
 ## What has not been verified
 
+Review status: this project has not been audited. The Vespi kernel it runs on has had superreviews with Claude Code and no independent external security audit.
+
+
 No real institution, claimant, reviewer, rights holder, permission, work, or evidence participated in the local walkthrough. External source documents, real identities, legal authority, authenticity, lawful acquisition, complete custody history, cultural value, and applicable legal compliance have not been verified. The PERMA testnet issuance is independently checked against Horizon, but this does not verify a marketplace, payments for cultural works, royalties, demand, or economic value. There is no internet publication, permanent preservation, operating marketplace, or production deployment evidenced. The precise coverage and open questions are in [Evidence](./docs/EVIDENCE.md) and [Legal and limits](./docs/LEGAL_AND_LIMITS.md).
 
 ## How to review the project
@@ -255,6 +258,9 @@ El recorrido local registrado consume recibos del kernel de Vespi y comprueba su
 El estudio RUC-D concluye que una moneda propia no hace falta para registrar afirmaciones, permisos o recibos. PERMA es un activo clásico de Stellar ya emitido en testnet como prueba de concepto técnica del medio de pago de un marketplace cultural y sus regalías. Ese marketplace no está construido, y también se podría pagar con USDC o XLM. La oferta fija es de 100.000.000 PERMA. La emisora está bloqueada, sin banderas de autorización ni clawback. Los parámetros de asignación de esta corrida de prueba son: tesorería 20 %, comunidad cultural 40 %, reserva de liquidez 10 % sin pool ni ofertas, contingencia 5 %, asesores 10 % y fundador 15 % con cliff de 12 meses y 36 balances reclamables. Un verificador independiente contrastó el activo con Horizon: 63 transacciones con hash, en los ledgers 5010900 a 5010953. Estos porcentajes son parámetros de esta corrida de prueba, no un reparto económico adoptado. No hay precio, venta, liquidez ni promesa de valor, y un token no transfiere derechos sobre una obra cultural. No se emitirá nada en mainnet ni se venderá sin revisión de un abogado. Lee el [estudio de economía y token](./docs/TOKEN.md) para conocer el análisis RUC-D, las alternativas, la evidencia y las preguntas abiertas.
 
 ## Qué no se ha verificado
+
+Estado de revisión: este proyecto no ha sido auditado. El kernel de Vespi sobre el que corre ha tenido superreviews con Claude Code y ninguna auditoría de seguridad externa independiente.
+
 
 En el recorrido local no participaron instituciones, declarantes, revisores, titulares de derechos, permisos, obras ni evidencias reales. No se verificaron documentos externos, identidades reales, autoridad jurídica, autenticidad, adquisición lícita, historia completa de custodia, valor cultural ni cumplimiento legal aplicable. La emisión de PERMA en testnet fue contrastada de forma independiente con Horizon, pero esto no verifica un marketplace, pagos por obras culturales, regalías, demanda ni valor económico. No hay evidencia de publicación en internet, preservación permanente, marketplace operativo ni despliegue de producción. Los límites y preguntas abiertas se detallan en [Evidencia](./docs/EVIDENCE.md) y [Marco legal y límites](./docs/LEGAL_AND_LIMITS.md).
 
