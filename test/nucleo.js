@@ -11,7 +11,7 @@ const KERNEL = path.join(__dirname, '..', 'vendor', 'vespi-kernel');
 // Los módulos que el proyecto consume directamente; SOURCE.md declara más.
 const MODULOS = ['authority.js', 'continuity.js', 'delegation.js', 'operation.js', 'receipt.js'];
 // Commit de la cabecera declarado en vendor/vespi-kernel/SOURCE.md (kernel 0.1.6).
-const COMMIT = '7767daa369e464b486ddf16b08b8985e59ec107d';
+const COMMIT = '98a33280fb35cb1fc7feda483e7dd57b97362c49';
 
 function cuerpo(archivo) {
   const bytes = fs.readFileSync(archivo);

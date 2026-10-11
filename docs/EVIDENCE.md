@@ -24,7 +24,7 @@ The later mutation sweep changed six rules one at a time: claimant and reviewer 
 
 ### Kernel identity and the digest check
 
-The project pins the consumed Vespi kernel to **0.1.6** (commit `7767daa369e464b486ddf16b08b8985e59ec107d`), copied into this repository as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture on 2026-10-03 was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. The suite reports four kernel-provenance checks:
+The project pins the consumed Vespi kernel to **0.1.6** (commit `98a33280fb35cb1fc7feda483e7dd57b97362c49`), copied into this repository as `vendor/vespi-kernel`, and the suite verifies that copy against its SOURCE.md, module by module and commit by commit. The earlier capture on 2026-10-03 was red because the project was pinned to an older kernel cut (0.1.3); that pin is now complete. The suite reports four kernel-provenance checks:
 
 - the vendored kit declares every module in its SOURCE.md;
 - the consumed kernel matches the kit's digest table;
@@ -151,7 +151,7 @@ El barrido posterior cambió seis reglas de una en una: independencia entre decl
 
 ### Identidad del kernel y comprobación por digest
 
-El proyecto fija el kernel de Vespi consumido a **0.1.6** (commit `7767daa369e464b486ddf16b08b8985e59ec107d`), copiado dentro de este repositorio como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura del 2026-10-03 estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. La suite informa cuatro comprobaciones de procedencia del kernel:
+El proyecto fija el kernel de Vespi consumido a **0.1.6** (commit `98a33280fb35cb1fc7feda483e7dd57b97362c49`), copiado dentro de este repositorio como `vendor/vespi-kernel`, y la suite verifica esa copia contra su SOURCE.md, módulo por módulo y commit por commit. La captura del 2026-10-03 estuvo en rojo porque el proyecto estaba fijado a un corte viejo del kernel (0.1.3); esa fijación ya está completa. La suite informa cuatro comprobaciones de procedencia del kernel:
 
 - el kit vendorizado declara todos los módulos de su SOURCE.md;
 - el kernel consumido coincide con la tabla de digest del kit;
