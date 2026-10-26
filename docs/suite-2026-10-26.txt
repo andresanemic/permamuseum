@@ -1,0 +1,65 @@
+Suite capture — permamuseum — 2026-10-26
+Command: node --test test/*.test.js (clone of commit 533ca6e with the kernel 0.1.8 re-pin applied, empty HOME)
+Node: v24.22.1 · Kernel: Vespi 0.1.8, commit 13dbe24310dab2a12eee26ad51dfdfddbff5458b (tag v0.1.8-kernel), copied in vendor/vespi-kernel
+Summary: tests 52 pass 52 fail 0 cancelled 0 skipped 0 todo 0 
+
+✔ el kit vendorizado declara todos los módulos del SOURCE.md (3.1861ms)
+✔ el núcleo consumido coincide con la tabla de digest del kit (211.2005ms)
+✔ la copia vendorizada no tiene módulos sin declarar ni huecos (1.5863ms)
+✔ los módulos vendorizados declaran el mismo commit (4.599ms)
+✔ el recorrido real obtiene aceptaciones verificables y conserva el rechazo (157.9696ms)
+✔ 01 museo sin verificar no publica (1.3917ms)
+✔ 02 declarante y verificador no pueden ser la misma parte (0.1449ms)
+✔ 03 evidencia vacía no se revisa (0.0885ms)
+✔ 04 referencias repetidas no son fuentes independientes (0.1112ms)
+✔ 05 procedencias incompatibles de una obra chocan (0.3288ms)
+✔ 06 regalía superior al techo autorizado se rechaza (0.0863ms)
+✔ 07 permiso vencido no autoriza uso (0.1525ms)
+✔ 08 permiso revocado no autoriza uso posterior (0.1424ms)
+✔ 09 recibo repetido no reactiva operación revocada (0.1806ms)
+✔ 10 dos museos no reclaman procedencia exclusiva de la misma obra (0.2787ms)
+✔ 11 identidad de cobro duplicada no duplica regalía (0.1406ms)
+✔ 12 indicios documentados de saqueo bloquean la venta (0.1829ms)
+✔ 13 texto libre verificado no es dictamen estructurado (0.098ms)
+✔ 14 administrador único no acredita verificación (0.0856ms)
+✔ 15 contradicción en evidencia deja la afirmación impugnada (0.0691ms)
+✔ 16 autoridad vencida bloquea publicación (1.336ms)
+✔ 17 principal no escribe en espacio ajeno (0.1108ms)
+✔ 18 permiso exige obra identificada y derechos declarados (0.0441ms)
+✔ 19 uso fuera del alcance concedido se rechaza (0.0873ms)
+✔ 20 un token no transfiere permiso sin cláusula expresa (0.0403ms)
+✔ 21 salto de custodia sin actor o evidencia queda incompleto (0.069ms)
+✔ 22 dictamen de evidencia anterior no verifica la versión actual (0.0464ms)
+✔ 23 ejecutor no verifica su propio efecto (0.0368ms)
+✔ 24 permiso revocado requiere nueva concesión para reactivarse (0.049ms)
+✔ 25 rechazo identifica resolver y dato faltante (0.0328ms)
+✔ CONTROL: un dictamen textual no publica sin recibo verificable del núcleo (72.4992ms)
+✔ CONTROL: permiso acotado válido cubre el uso pedido (0.1473ms)
+✔ CONTROL: dictamen válido tiene mandato, evidencia y verificador independiente (0.0805ms)
+✔ una afirmación textual o booleana no basta para marcar publicación verificada (68.7529ms)
+✔ un objeto de dictamen escrito en datos sin recibo del núcleo no verifica (0.2128ms)
+✔ la resolución de rutas rechaza ubicaciones fuera del repositorio (1.3811ms)
+✔ la salida escapa controles terminales y saltos de línea del nombre del museo (114.6199ms)
+✔ la configuración fija 100 millones y distribuye las seis cubetas autorizadas (4.0031ms)
+✔ la configuración rechaza cambios de oferta, segunda emisión, venta, mainnet y banderas (1.5934ms)
+✔ el plan crea una sola emisión por oferta exacta y termina bloqueando la emisora (2.8456ms)
+✔ el plan reserva liquidez sin pool y usa cubeta de comunidad cultural (0.9632ms)
+✔ fundador único Andrés recibe 36 balances, con cliff de 12 meses y respaldo de tesorería a 180 días (1.4622ms)
+✔ la demo de vesting rechaza reclamo temprano y permite el reclamo al desbloquear (0.584ms)
+✔ ninguna operación ofrece precio, pool ni venta de PERMA (0.8395ms)
+✔ el verificador confirma oferta constante, banderas apagadas, emisor bloqueado y un solo fundador (0.9643ms)
+✔ los utilitarios leen resultados Horizon y no aceptan datos mal formados (0.3694ms)
+✔ el ejecutor simulado reanuda estado completo sin volver a emitir PERMA (3904.4331ms)
+✔ la protección Windows aplica ACL privada a la carpeta de llaves (1.1749ms)
+✔ el guardado reintenta rename transitorio y elimina el temporal (141.4923ms)
+✔ la paginación Horizon termina al recibir página vacía aunque conserve enlace next (0.7922ms)
+✔ el decodificador de XDR falla cerrado para datos inválidos y reconoce ausencia de XDR (0.345ms)
+✔ el adaptador real no usa variables de configuración sin declarar (defecto hallado al ejecutar en vivo) (0.5152ms)
+ℹ tests 52
+ℹ suites 0
+ℹ pass 52
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4214.1693

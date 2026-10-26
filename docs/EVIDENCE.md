@@ -1,5 +1,7 @@
 # Evidence / Evidencia
 
+> **2026-10-26:** re-pinned to Vespi kernel 0.1.8 (release `v0.1.8-kernel`, commit `13dbe24`); [`suite-2026-10-26.txt`](./suite-2026-10-26.txt) reports 52 of 52 pass. The records below describe the 2026-10-11 capture. · **26 oct. 2026:** nueva fijación al kernel de Vespi 0.1.8; 52 de 52 aprobadas. Los registros de abajo describen la captura del 2026-10-11.
+
 ## English
 
 This page summarizes dated project records: the suite captured 2026-10-11 and published here as docs/suite-2026-10-11.txt, which includes a local walkthrough using synthetic data and no network, and a separate PERMA issuance on Stellar testnet. The public repository contains the source code, test files, and read-only verifier code (`scripts/token-verify.mjs`) under the review-only license. Read the local results as the project’s captured report; the suite can be rerun from this repository with `npm test`, and the testnet hashes can be checked individually through Horizon as described below.

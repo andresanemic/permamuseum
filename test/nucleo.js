@@ -10,8 +10,8 @@ const { createHash } = require('node:crypto');
 const KERNEL = path.join(__dirname, '..', 'vendor', 'vespi-kernel');
 // Los módulos que el proyecto consume directamente; SOURCE.md declara más.
 const MODULOS = ['authority.js', 'continuity.js', 'delegation.js', 'operation.js', 'receipt.js'];
-// Commit de la cabecera declarado en vendor/vespi-kernel/SOURCE.md (kernel 0.1.6).
-const COMMIT = '39d45733839d0a05f60248fc6e5b81c892c464f8';
+// Commit de la cabecera declarado en vendor/vespi-kernel/SOURCE.md (kernel 0.1.8).
+const COMMIT = '13dbe24310dab2a12eee26ad51dfdfddbff5458b';
 
 function cuerpo(archivo) {
   const bytes = fs.readFileSync(archivo);
